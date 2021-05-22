@@ -7,6 +7,19 @@
 
 import UIKit
 import SDWebImage
+extension RestaurantCollectionViewCell {
+    fileprivate enum Constants {
+        enum Shadow {
+            static let opacity: Float = 1
+            static let radius: CGFloat = 10
+            static let offset = CGSize(width: 0, height: 5)
+            static let cornerRadius: CGFloat = 5
+        }
+        enum UI {
+            static let cornerRadius: CGFloat = 5
+        }
+    }
+}
 
 class RestaurantCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var containerView: UIView!
@@ -39,7 +52,20 @@ class RestaurantCollectionViewCell: UICollectionViewCell {
         prepareCampaignView(campaignText: restaurant.campaignText)
         prepareStatusView(isClosed: restaurant.closed)
         prepareDescriptionView(restaurant)
+        prepareShadow()
     }
+
+    private func prepareShadow() {
+        layer.shadowColor = UIColor.verySoftGray.cgColor
+        layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: Constants.Shadow.cornerRadius).cgPath
+        layer.shadowOffset = Constants.Shadow.offset
+        layer.shadowOpacity = Constants.Shadow.opacity
+        layer.shadowRadius = Constants.Shadow.radius
+        layer.masksToBounds = false
+        containerView.layer.cornerRadius = Constants.UI.cornerRadius
+        containerView.layer.masksToBounds = true
+    }
+
 
     private func prepareBannerImage(with urlString: String?) {
         if let imageUrlString = urlString, let url = URL(string: imageUrlString) {
