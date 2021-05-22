@@ -14,7 +14,7 @@
                 <outlet property="contentView" destination="KsQ-Pm-wiP" id="MH7-GP-aOj"/>
                 <outlet property="imageContainerView" destination="5gA-Rf-N3m" id="0zm-mu-MXw"/>
                 <outlet property="stampImageView" destination="Vzx-VL-UNR" id="UkZ-df-IKJ"/>
-                <outlet property="stampLabel" destination="5Cr-Mh-9NL" id="0H8-EY-g2w"/>
+                <outlet property="stampLabel" destination="5Cr-Mh-9NL" id="4s8-ph-roM"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -43,7 +43,7 @@
                                 <constraint firstItem="Vzx-VL-UNR" firstAttribute="leading" secondItem="5gA-Rf-N3m" secondAttribute="leading" id="WsK-dD-K1V"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Cr-Mh-9NL">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Cr-Mh-9NL">
                             <rect key="frame" x="15" y="0.0" width="59" height="23"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>

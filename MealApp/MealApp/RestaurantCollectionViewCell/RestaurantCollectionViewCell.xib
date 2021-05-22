@@ -38,14 +38,14 @@
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2EA-k8-3PE" userLabel="RatingView" customClass="StampView" customModule="MealApp" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="23"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="uyd-yi-CCX"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efZ-kf-lBA" userLabel="CampaignView" customClass="StampView" customModule="MealApp" customModuleProvider="target">
                                                         <rect key="frame" x="60" y="0.0" width="88" height="23"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="88" id="5pZ-2H-YyK"/>
                                                             <constraint firstAttribute="width" priority="999" constant="88" id="cNO-VM-Ym7"/>
@@ -85,7 +85,7 @@
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zY-6Z-Ftq" userLabel="Closed View" customClass="StampView" customModule="MealApp" customModuleProvider="target">
                                                                 <rect key="frame" x="265" y="0.0" width="50" height="19"/>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="19" id="8hP-Ya-SXd"/>
                                                                     <constraint firstAttribute="width" constant="50" id="NSB-pV-XY6"/>
@@ -99,7 +99,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h2p-sn-hd3">
                                                                 <rect key="frame" x="0.0" y="0.0" width="18" height="13"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="adi-G4-Blw" userLabel="Description Image View">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="goIcon" translatesAutoresizingMaskIntoConstraints="NO" id="adi-G4-Blw" userLabel="Description Image View">
                                                                         <rect key="frame" x="0.0" y="1.5" width="18" height="10"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="18" id="Ao9-w9-lzw"/>
@@ -154,10 +154,21 @@
                 <constraint firstItem="jgo-y3-Yg3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="fhW-4r-FVD"/>
                 <constraint firstAttribute="trailing" secondItem="jgo-y3-Yg3" secondAttribute="trailing" id="iCm-97-Mx0"/>
             </constraints>
+            <connections>
+                <outlet property="bannerImageView" destination="TWA-Bo-lai" id="zNE-sN-oYa"/>
+                <outlet property="campaignView" destination="efZ-kf-lBA" id="IdW-zo-qoM"/>
+                <outlet property="containerView" destination="jgo-y3-Yg3" id="Hnh-pr-zJ3"/>
+                <outlet property="descriptionLabel" destination="JUQ-QB-wd9" id="sEX-Cl-psb"/>
+                <outlet property="ratingView" destination="2EA-k8-3PE" id="MM0-fu-FI0"/>
+                <outlet property="statusImageView" destination="adi-G4-Blw" id="79N-fy-mOE"/>
+                <outlet property="statusView" destination="2zY-6Z-Ftq" id="217-Fh-GWg"/>
+                <outlet property="titleLabel" destination="zO3-tG-5F8" id="Fut-vd-tlb"/>
+            </connections>
             <point key="canvasLocation" x="63" y="135"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="goIcon" width="18" height="10"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

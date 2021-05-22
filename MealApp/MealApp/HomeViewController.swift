@@ -8,6 +8,16 @@
 import UIKit
 import CoreApi
 
+extension HomeViewController {
+    fileprivate enum Constants {
+        static let cellDescriptionViewHeight: CGFloat = 60
+        static let cellBannerImageViewAspectRatio: CGFloat = 130/345
+
+        static let cellLeftPadding: CGFloat = 15
+        static let cellRightPadding: CGFloat = 15
+    }
+}
+
 class HomeViewController: UIViewController {
     let networkManager: NetworkManager<HomeEndpointItem> = NetworkManager()
     @IBOutlet private weak var restaurantsCollectionView: UICollectionView!
@@ -40,6 +50,12 @@ class HomeViewController: UIViewController {
             }
         }
     }
+
+    private func calculateCellHeight() -> CGFloat {
+        let cellWidth = restaurantsCollectionView.frame.size.width - (Constants.cellLeftPadding + Constants.cellRightPadding)
+        let bannerImageHeight = cellWidth * Constants.cellBannerImageViewAspectRatio
+        return Constants.cellDescriptionViewHeight + bannerImageHeight
+    }
 }
 
 extension HomeViewController: UICollectionViewDataSource {
@@ -49,11 +65,19 @@ extension HomeViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeCell(cellType: RestaurantCollectionViewCell.self, indexPath: indexPath)
-        // cell configure
+        if let restaurant = widgets?[indexPath.item].restaurants?.first {
+            cell.configure(restaurant: restaurant)
+        }
         return cell
     }
 }
 
-extension HomeViewController: UICollectionViewDelegate {
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        .init(width: collectionView.frame.size.width - (Constants.cellLeftPadding + Constants.cellRightPadding), height: calculateCellHeight())
+    }
 
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        .init(top: .zero, left: Constants.cellLeftPadding, bottom: .zero, right: Constants.cellRightPadding)
+    }
 }
