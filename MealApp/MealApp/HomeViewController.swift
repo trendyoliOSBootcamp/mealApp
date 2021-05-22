@@ -12,21 +12,37 @@ extension HomeViewController {
     fileprivate enum Constants {
         static let cellDescriptionViewHeight: CGFloat = 60
         static let cellBannerImageViewAspectRatio: CGFloat = 130/345
-
         static let cellLeftPadding: CGFloat = 15
         static let cellRightPadding: CGFloat = 15
+        static let firstPageHref: String = "page=1"
     }
 }
 
 class HomeViewController: UIViewController {
     let networkManager: NetworkManager<HomeEndpointItem> = NetworkManager()
     @IBOutlet private weak var restaurantsCollectionView: UICollectionView!
-    private var widgets: [Widget]?
+    private var widgets: [Widget] = []
+    private var href: String = Constants.firstPageHref
+    private var shouldFetchNextPage: Bool = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareCollectionView()
-        fetchWidgets()
+        fetchWidgets(query: href)
+        addRefreshControl()
+    }
+
+    private func addRefreshControl() {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
+        restaurantsCollectionView.refreshControl = refreshControl
+    }
+
+    @objc
+    private func pullToRefresh() {
+        href = Constants.firstPageHref
+        shouldFetchNextPage = true
+        fetchWidgets(query: href)
     }
 
     private func prepareCollectionView() {
@@ -36,14 +52,23 @@ class HomeViewController: UIViewController {
         restaurantsCollectionView.register(cellType: RestaurantCollectionViewCell.self)
     }
 
-    private func fetchWidgets() {
-        networkManager.request(endpoint: .homepage(query: "page=1"), type: HomeResponse.self) { [weak self] result in
+    private func fetchWidgets(query: String) {
+        networkManager.request(endpoint: .homepage(query: query), type: HomeResponse.self) { [weak self] result in
             switch result {
             case .success(let response):
-                self?.widgets = response.widgets
+                if let widgets = response.widgets {
+                    if query == Constants.firstPageHref {
+                        self?.widgets = widgets
+                    } else {
+                        self?.shouldFetchNextPage = !widgets.isEmpty
+                        self?.widgets.append(contentsOf: widgets)
+                    }
+                } else {
+                    self?.shouldFetchNextPage = false
+                }
+                self?.href = response.href ?? ""
                 self?.restaurantsCollectionView.reloadData()
-                print(response)
-                break
+                self?.restaurantsCollectionView.refreshControl?.endRefreshing()
             case .failure(let error):
                 print(error)
                 break
@@ -60,12 +85,12 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        widgets?.count ?? .zero
+        widgets.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeCell(cellType: RestaurantCollectionViewCell.self, indexPath: indexPath)
-        if let restaurant = widgets?[indexPath.item].restaurants?.first {
+        if let restaurant = widgets[indexPath.item].restaurants?.first {
             cell.configure(restaurant: restaurant)
         }
         return cell
@@ -79,5 +104,13 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         .init(top: .zero, left: Constants.cellLeftPadding, bottom: .zero, right: Constants.cellRightPadding)
+    }
+}
+
+extension HomeViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.item == (widgets.count - 1), shouldFetchNextPage {
+            fetchWidgets(query: href)
+        }
     }
 }
