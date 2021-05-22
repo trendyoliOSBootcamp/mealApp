@@ -18,7 +18,7 @@ extension HomeViewController {
     }
 }
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, LoadingShowable {
     let networkManager: NetworkManager<HomeEndpointItem> = NetworkManager()
     @IBOutlet private weak var restaurantsCollectionView: UICollectionView!
     private var widgets: [Widget] = []
@@ -28,10 +28,13 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareCollectionView()
-        fetchWidgets(query: href)
         addRefreshControl()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        fetchWidgets(query: href)
+    }
+    
     private func addRefreshControl() {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
@@ -53,7 +56,9 @@ class HomeViewController: UIViewController {
     }
 
     private func fetchWidgets(query: String) {
+        showLoading()
         networkManager.request(endpoint: .homepage(query: query), type: HomeResponse.self) { [weak self] result in
+            self?.hideLoading()
             switch result {
             case .success(let response):
                 if let widgets = response.widgets {
