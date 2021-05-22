@@ -22,6 +22,8 @@ class HomeViewController: UIViewController {
     private func prepareCollectionView() {
         restaurantsCollectionView.dataSource = self
         restaurantsCollectionView.delegate = self
+
+        restaurantsCollectionView.register(cellType: RestaurantCollectionViewCell.self)
     }
 
     private func fetchWidgets() {
@@ -29,6 +31,7 @@ class HomeViewController: UIViewController {
             switch result {
             case .success(let response):
                 self?.widgets = response.widgets
+                self?.restaurantsCollectionView.reloadData()
                 print(response)
                 break
             case .failure(let error):
