@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,9 @@
 		DC55B6162658EC0D00C5D2FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC55B6142658EC0D00C5D2FD /* LaunchScreen.storyboard */; };
 		DC55B6212658EC0D00C5D2FD /* MealAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55B6202658EC0D00C5D2FD /* MealAppTests.swift */; };
 		DC55B62C2658EC0D00C5D2FD /* MealAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55B62B2658EC0D00C5D2FD /* MealAppUITests.swift */; };
+		DC55B63B2658ED9700C5D2FD /* CoreApi in Frameworks */ = {isa = PBXBuildFile; productRef = DC55B63A2658ED9700C5D2FD /* CoreApi */; };
+		DC55B63D2658F21100C5D2FD /* HomeEndpointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55B63C2658F21100C5D2FD /* HomeEndpointItem.swift */; };
+		DC55B63F2658F5A800C5D2FD /* Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55B63E2658F5A800C5D2FD /* Widget.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,8 @@
 		DC55B6272658EC0D00C5D2FD /* MealAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MealAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC55B62B2658EC0D00C5D2FD /* MealAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealAppUITests.swift; sourceTree = "<group>"; };
 		DC55B62D2658EC0D00C5D2FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC55B63C2658F21100C5D2FD /* HomeEndpointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEndpointItem.swift; sourceTree = "<group>"; };
+		DC55B63E2658F5A800C5D2FD /* Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widget.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC55B63B2658ED9700C5D2FD /* CoreApi in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +89,7 @@
 				DC55B61F2658EC0D00C5D2FD /* MealAppTests */,
 				DC55B62A2658EC0D00C5D2FD /* MealAppUITests */,
 				DC55B6072658EC0B00C5D2FD /* Products */,
+				DC55B6392658ED9700C5D2FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,10 +109,12 @@
 				DC55B6092658EC0B00C5D2FD /* AppDelegate.swift */,
 				DC55B60B2658EC0B00C5D2FD /* SceneDelegate.swift */,
 				DC55B60D2658EC0B00C5D2FD /* ViewController.swift */,
+				DC55B63C2658F21100C5D2FD /* HomeEndpointItem.swift */,
 				DC55B60F2658EC0B00C5D2FD /* Main.storyboard */,
 				DC55B6122658EC0D00C5D2FD /* Assets.xcassets */,
 				DC55B6142658EC0D00C5D2FD /* LaunchScreen.storyboard */,
 				DC55B6172658EC0D00C5D2FD /* Info.plist */,
+				DC55B63E2658F5A800C5D2FD /* Widget.swift */,
 			);
 			path = MealApp;
 			sourceTree = "<group>";
@@ -128,6 +137,13 @@
 			path = MealAppUITests;
 			sourceTree = "<group>";
 		};
+		DC55B6392658ED9700C5D2FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +160,9 @@
 			dependencies = (
 			);
 			name = MealApp;
+			packageProductDependencies = (
+				DC55B63A2658ED9700C5D2FD /* CoreApi */,
+			);
 			productName = MealApp;
 			productReference = DC55B6062658EC0B00C5D2FD /* MealApp.app */;
 			productType = "com.apple.product-type.application";
@@ -260,6 +279,8 @@
 			files = (
 				DC55B60E2658EC0B00C5D2FD /* ViewController.swift in Sources */,
 				DC55B60A2658EC0B00C5D2FD /* AppDelegate.swift in Sources */,
+				DC55B63F2658F5A800C5D2FD /* Widget.swift in Sources */,
+				DC55B63D2658F21100C5D2FD /* HomeEndpointItem.swift in Sources */,
 				DC55B60C2658EC0B00C5D2FD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,6 +614,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DC55B63A2658ED9700C5D2FD /* CoreApi */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreApi;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DC55B5FE2658EC0B00C5D2FD /* Project object */;
 }

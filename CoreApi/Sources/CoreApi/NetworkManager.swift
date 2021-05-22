@@ -6,28 +6,13 @@
 //
 
 import Alamofire
+import Foundation
 
-protocol Endpoint {
-    var baseUrl: String { get }
-    var path: String { get }
-    var method: HTTPMethod { get }
-    var parameters: [String: Any] { get }
-    var headers: [String: String] { get}
-}
+public typealias Completion<T> = (Result<T, APIClientError>) -> Void where T: Decodable
 
-extension Endpoint {
-    var encoding: ParameterEncoding {
-        switch method {
-        case .get: return URLEncoding.default
-        default: return JSONEncoding.default
-        }
-    }
-
-    var headers: [String: String]? { [:] }
-    var url: String { "\(baseUrl)\(path)"}
-}
-
-public final class NetworkManager {
+public final class NetworkManager<EndpointItem: Endpoint> {
+    public init() { }
+    
     private var possibleEmptyResponseCodes: Set<Int> {
         var defaultSet = DataResponseSerializer.defaultEmptyResponseCodes
         defaultSet.insert(200)
@@ -35,7 +20,7 @@ public final class NetworkManager {
         return defaultSet
     }
 
-    func request(endpoint: Endpoint) {
+    public func request <T: Decodable>(endpoint: EndpointItem, type: T.Type, completion: @escaping Completion<T>) {
         AF.request(endpoint.url,
                    method: endpoint.method,
                    parameters: endpoint.parameters,
@@ -45,9 +30,29 @@ public final class NetworkManager {
             .response(responseSerializer: DataResponseSerializer(emptyResponseCodes: possibleEmptyResponseCodes), completionHandler: { response in
                 switch response.result {
                 case .success(let data):
-                    break
+                    do {
+                        let decodedObject = try JSONDecoder().decode(type, from: data)
+                        completion(.success(decodedObject))
+                    } catch {
+                        let decodingError = APIClientError.decoding(error: error as? DecodingError)
+                        completion(.failure(decodingError))
+                    }
                 case .failure(let error):
-                    break
+                    if NSURLErrorTimedOut == (error as NSError).code {
+                        completion(.failure(.timeout))
+                    } else {
+                        guard let data = response.data else {
+                            completion(.failure(.networkError))
+                            return
+                        }
+                        do {
+                            let clientError = try JSONDecoder().decode(ClientError.self, from: data)
+                            completion(.failure(.handledError(error: clientError)))
+                        } catch {
+                            let decodingError = APIClientError.decoding(error: error as? DecodingError)
+                            completion(.failure(decodingError))
+                        }
+                    }
                 }
             })
     }
