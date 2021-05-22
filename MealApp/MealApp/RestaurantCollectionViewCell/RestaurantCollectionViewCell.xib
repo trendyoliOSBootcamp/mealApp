@@ -36,14 +36,14 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tnV-bh-W8d">
                                                 <rect key="frame" x="15" y="97" width="148" height="23"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2EA-k8-3PE" userLabel="RatingView">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2EA-k8-3PE" userLabel="RatingView" customClass="StampView" customModule="MealApp" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="23"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="uyd-yi-CCX"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efZ-kf-lBA" userLabel="CampaignView">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efZ-kf-lBA" userLabel="CampaignView" customClass="StampView" customModule="MealApp" customModuleProvider="target">
                                                         <rect key="frame" x="60" y="0.0" width="88" height="23"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
@@ -83,7 +83,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zY-6Z-Ftq" userLabel="Closed View">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zY-6Z-Ftq" userLabel="Closed View" customClass="StampView" customModule="MealApp" customModuleProvider="target">
                                                                 <rect key="frame" x="265" y="0.0" width="50" height="19"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
