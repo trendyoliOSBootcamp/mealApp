@@ -25,7 +25,7 @@
 		9B40C6F92659161000404678 /* StampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B40C6F82659161000404678 /* StampView.swift */; };
 		DC55B60A2658EC0B00C5D2FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55B6092658EC0B00C5D2FD /* AppDelegate.swift */; };
 		DC55B60C2658EC0B00C5D2FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55B60B2658EC0B00C5D2FD /* SceneDelegate.swift */; };
-		DC55B60E2658EC0B00C5D2FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55B60D2658EC0B00C5D2FD /* ViewController.swift */; };
+		DC55B60E2658EC0B00C5D2FD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55B60D2658EC0B00C5D2FD /* HomeViewController.swift */; };
 		DC55B6112658EC0B00C5D2FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC55B60F2658EC0B00C5D2FD /* Main.storyboard */; };
 		DC55B6132658EC0D00C5D2FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC55B6122658EC0D00C5D2FD /* Assets.xcassets */; };
 		DC55B6162658EC0D00C5D2FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC55B6142658EC0D00C5D2FD /* LaunchScreen.storyboard */; };
@@ -73,7 +73,7 @@
 		DC55B6062658EC0B00C5D2FD /* MealApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MealApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC55B6092658EC0B00C5D2FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC55B60B2658EC0B00C5D2FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DC55B60D2658EC0B00C5D2FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC55B60D2658EC0B00C5D2FD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DC55B6102658EC0B00C5D2FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC55B6122658EC0D00C5D2FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC55B6152658EC0D00C5D2FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -212,7 +212,7 @@
 				9B40C69C265904FA00404678 /* RestaurantCollectionViewCell */,
 				DC55B6092658EC0B00C5D2FD /* AppDelegate.swift */,
 				DC55B60B2658EC0B00C5D2FD /* SceneDelegate.swift */,
-				DC55B60D2658EC0B00C5D2FD /* ViewController.swift */,
+				DC55B60D2658EC0B00C5D2FD /* HomeViewController.swift */,
 				DC55B63C2658F21100C5D2FD /* HomeEndpointItem.swift */,
 				DC55B60F2658EC0B00C5D2FD /* Main.storyboard */,
 				DC55B6122658EC0D00C5D2FD /* Assets.xcassets */,
@@ -390,7 +390,7 @@
 			files = (
 				9B40C6B426590CDE00404678 /* UICollectionView+Extension.swift in Sources */,
 				9B40C6B226590CDE00404678 /* UIFont+Extension.swift in Sources */,
-				DC55B60E2658EC0B00C5D2FD /* ViewController.swift in Sources */,
+				DC55B60E2658EC0B00C5D2FD /* HomeViewController.swift in Sources */,
 				9B40C6BC26590CDE00404678 /* LoadingShowable.swift in Sources */,
 				DC55B60A2658EC0B00C5D2FD /* AppDelegate.swift in Sources */,
 				DC55B63F2658F5A800C5D2FD /* Widget.swift in Sources */,
