@@ -23,6 +23,7 @@
 		9B40C6D726590E8000404678 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B40C6D626590E8000404678 /* LoadingView.swift */; };
 		9B40C6F4265915E600404678 /* StampView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B40C6F3265915E600404678 /* StampView.xib */; };
 		9B40C6F92659161000404678 /* StampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B40C6F82659161000404678 /* StampView.swift */; };
+		9B40C70226591F8E00404678 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9B40C70126591F8E00404678 /* SDWebImage */; };
 		DC55B60A2658EC0B00C5D2FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55B6092658EC0B00C5D2FD /* AppDelegate.swift */; };
 		DC55B60C2658EC0B00C5D2FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55B60B2658EC0B00C5D2FD /* SceneDelegate.swift */; };
 		DC55B60E2658EC0B00C5D2FD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55B60D2658EC0B00C5D2FD /* HomeViewController.swift */; };
@@ -93,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B40C70226591F8E00404678 /* SDWebImage in Frameworks */,
 				DC55B63B2658ED9700C5D2FD /* CoreApi in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,6 +268,7 @@
 			name = MealApp;
 			packageProductDependencies = (
 				DC55B63A2658ED9700C5D2FD /* CoreApi */,
+				9B40C70126591F8E00404678 /* SDWebImage */,
 			);
 			productName = MealApp;
 			productReference = DC55B6062658EC0B00C5D2FD /* MealApp.app */;
@@ -338,6 +341,9 @@
 				Base,
 			);
 			mainGroup = DC55B5FD2658EC0B00C5D2FD;
+			packageReferences = (
+				9B40C70026591F8E00404678 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = DC55B6072658EC0B00C5D2FD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -735,7 +741,23 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		9B40C70026591F8E00404678 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
+		9B40C70126591F8E00404678 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B40C70026591F8E00404678 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
 		DC55B63A2658ED9700C5D2FD /* CoreApi */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CoreApi;
