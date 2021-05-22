@@ -9,6 +9,20 @@
 /* Begin PBXBuildFile section */
 		9B40C69F265904FA00404678 /* RestaurantCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B40C69D265904FA00404678 /* RestaurantCollectionViewCell.xib */; };
 		9B40C6A0265904FA00404678 /* RestaurantCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B40C69E265904FA00404678 /* RestaurantCollectionViewCell.swift */; };
+		9B40C6B226590CDE00404678 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B40C6A526590CDE00404678 /* UIFont+Extension.swift */; };
+		9B40C6B326590CDE00404678 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B40C6A626590CDE00404678 /* UIColor+Extension.swift */; };
+		9B40C6B426590CDE00404678 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B40C6A726590CDE00404678 /* UICollectionView+Extension.swift */; };
+		9B40C6B526590CDE00404678 /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B40C6A826590CDE00404678 /* UICollectionViewCell+Extension.swift */; };
+		9B40C6B626590CDE00404678 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B40C6AA26590CDE00404678 /* Lato-Thin.ttf */; };
+		9B40C6B726590CDE00404678 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B40C6AB26590CDE00404678 /* Lato-Bold.ttf */; };
+		9B40C6B826590CDE00404678 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B40C6AC26590CDE00404678 /* Lato-Regular.ttf */; };
+		9B40C6B926590CDE00404678 /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B40C6AD26590CDE00404678 /* Lato-Semibold.ttf */; };
+		9B40C6BA26590CDE00404678 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B40C6AE26590CDE00404678 /* Lato-Light.ttf */; };
+		9B40C6BB26590CDE00404678 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B40C6B026590CDE00404678 /* NibView.swift */; };
+		9B40C6BC26590CDE00404678 /* LoadingShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B40C6B126590CDE00404678 /* LoadingShowable.swift */; };
+		9B40C6D726590E8000404678 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B40C6D626590E8000404678 /* LoadingView.swift */; };
+		9B40C6F4265915E600404678 /* StampView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B40C6F3265915E600404678 /* StampView.xib */; };
+		9B40C6F92659161000404678 /* StampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B40C6F82659161000404678 /* StampView.swift */; };
 		DC55B60A2658EC0B00C5D2FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55B6092658EC0B00C5D2FD /* AppDelegate.swift */; };
 		DC55B60C2658EC0B00C5D2FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55B60B2658EC0B00C5D2FD /* SceneDelegate.swift */; };
 		DC55B60E2658EC0B00C5D2FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55B60D2658EC0B00C5D2FD /* ViewController.swift */; };
@@ -42,6 +56,20 @@
 /* Begin PBXFileReference section */
 		9B40C69D265904FA00404678 /* RestaurantCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestaurantCollectionViewCell.xib; sourceTree = "<group>"; };
 		9B40C69E265904FA00404678 /* RestaurantCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantCollectionViewCell.swift; sourceTree = "<group>"; };
+		9B40C6A526590CDE00404678 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		9B40C6A626590CDE00404678 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		9B40C6A726590CDE00404678 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		9B40C6A826590CDE00404678 /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
+		9B40C6AA26590CDE00404678 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
+		9B40C6AB26590CDE00404678 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		9B40C6AC26590CDE00404678 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		9B40C6AD26590CDE00404678 /* Lato-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Semibold.ttf"; sourceTree = "<group>"; };
+		9B40C6AE26590CDE00404678 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		9B40C6B026590CDE00404678 /* NibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
+		9B40C6B126590CDE00404678 /* LoadingShowable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingShowable.swift; sourceTree = "<group>"; };
+		9B40C6D626590E8000404678 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		9B40C6F3265915E600404678 /* StampView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StampView.xib; sourceTree = "<group>"; };
+		9B40C6F82659161000404678 /* StampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampView.swift; sourceTree = "<group>"; };
 		DC55B6062658EC0B00C5D2FD /* MealApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MealApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC55B6092658EC0B00C5D2FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC55B60B2658EC0B00C5D2FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +123,64 @@
 			path = RestaurantCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		9B40C6A426590CDE00404678 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9B40C6A526590CDE00404678 /* UIFont+Extension.swift */,
+				9B40C6A626590CDE00404678 /* UIColor+Extension.swift */,
+				9B40C6A726590CDE00404678 /* UICollectionView+Extension.swift */,
+				9B40C6A826590CDE00404678 /* UICollectionViewCell+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9B40C6A926590CDE00404678 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9B40C6AA26590CDE00404678 /* Lato-Thin.ttf */,
+				9B40C6AB26590CDE00404678 /* Lato-Bold.ttf */,
+				9B40C6AC26590CDE00404678 /* Lato-Regular.ttf */,
+				9B40C6AD26590CDE00404678 /* Lato-Semibold.ttf */,
+				9B40C6AE26590CDE00404678 /* Lato-Light.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		9B40C6AF26590CDE00404678 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9B40C6B026590CDE00404678 /* NibView.swift */,
+				9B40C6B126590CDE00404678 /* LoadingShowable.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9B40C6D526590E6100404678 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9B40C6EC265910F300404678 /* LoadingView */,
+				9B40C6DC26590F9400404678 /* StampView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9B40C6DC26590F9400404678 /* StampView */ = {
+			isa = PBXGroup;
+			children = (
+				9B40C6F3265915E600404678 /* StampView.xib */,
+				9B40C6F82659161000404678 /* StampView.swift */,
+			);
+			path = StampView;
+			sourceTree = "<group>";
+		};
+		9B40C6EC265910F300404678 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				9B40C6D626590E8000404678 /* LoadingView.swift */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
 		DC55B5FD2658EC0B00C5D2FD = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +205,10 @@
 		DC55B6082658EC0B00C5D2FD /* MealApp */ = {
 			isa = PBXGroup;
 			children = (
+				9B40C6D526590E6100404678 /* Views */,
+				9B40C6A426590CDE00404678 /* Extensions */,
+				9B40C6A926590CDE00404678 /* Fonts */,
+				9B40C6AF26590CDE00404678 /* Utils */,
 				9B40C69C265904FA00404678 /* RestaurantCollectionViewCell */,
 				DC55B6092658EC0B00C5D2FD /* AppDelegate.swift */,
 				DC55B60B2658EC0B00C5D2FD /* SceneDelegate.swift */,
@@ -265,8 +355,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC55B6162658EC0D00C5D2FD /* LaunchScreen.storyboard in Resources */,
+				9B40C6B926590CDE00404678 /* Lato-Semibold.ttf in Resources */,
+				9B40C6B726590CDE00404678 /* Lato-Bold.ttf in Resources */,
+				9B40C6BA26590CDE00404678 /* Lato-Light.ttf in Resources */,
 				DC55B6132658EC0D00C5D2FD /* Assets.xcassets in Resources */,
+				9B40C6B626590CDE00404678 /* Lato-Thin.ttf in Resources */,
+				9B40C6B826590CDE00404678 /* Lato-Regular.ttf in Resources */,
 				9B40C69F265904FA00404678 /* RestaurantCollectionViewCell.xib in Resources */,
+				9B40C6F4265915E600404678 /* StampView.xib in Resources */,
 				DC55B6112658EC0B00C5D2FD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,12 +388,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B40C6B426590CDE00404678 /* UICollectionView+Extension.swift in Sources */,
+				9B40C6B226590CDE00404678 /* UIFont+Extension.swift in Sources */,
 				DC55B60E2658EC0B00C5D2FD /* ViewController.swift in Sources */,
+				9B40C6BC26590CDE00404678 /* LoadingShowable.swift in Sources */,
 				DC55B60A2658EC0B00C5D2FD /* AppDelegate.swift in Sources */,
 				DC55B63F2658F5A800C5D2FD /* Widget.swift in Sources */,
+				9B40C6BB26590CDE00404678 /* NibView.swift in Sources */,
 				9B40C6A0265904FA00404678 /* RestaurantCollectionViewCell.swift in Sources */,
 				DC55B63D2658F21100C5D2FD /* HomeEndpointItem.swift in Sources */,
 				DC55B60C2658EC0B00C5D2FD /* SceneDelegate.swift in Sources */,
+				9B40C6B526590CDE00404678 /* UICollectionViewCell+Extension.swift in Sources */,
+				9B40C6D726590E8000404678 /* LoadingView.swift in Sources */,
+				9B40C6F92659161000404678 /* StampView.swift in Sources */,
+				9B40C6B326590CDE00404678 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,7 +507,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -458,7 +562,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
