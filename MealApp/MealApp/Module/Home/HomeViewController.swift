@@ -7,58 +7,68 @@
 
 import UIKit
 
+// HomePresenter -> HomeViewInterface
+protocol HomeViewInterface: AnyObject {
+    func showLoadingView()
+    func hideLoadingView()
+    func reloadData()
+    func endRefreshing()
+    func prepareCollectionView()
+    func addRefreshControl()
+}
+
 class HomeViewController: UIViewController, LoadingShowable {
     @IBOutlet private weak var restaurantsCollectionView: UICollectionView!
 
-    var viewModel: HomeViewModelProtocol! {
-        didSet {
-            viewModel.delegate = self
-        }
-    }
+    var presenter: HomePresenterInterface!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.load()
+        presenter.viewDidLoad()
     }
 
     @objc
     private func pullToRefresh() {
-        viewModel.pullToRefresh()
+        presenter.pullToRefresh()
     }
 }
 
+//MARK: - UICollectionViewDataSource
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.numberOfItems
+        presenter.numberOfItems
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeCell(cellType: RestaurantCollectionViewCell.self, indexPath: indexPath)
-        if let restaurant = viewModel.restaurant(indexPath.item) {
+        if let restaurant = presenter.restaurant(indexPath.item) {
             cell.viewModel = RestaurantCollectionViewCellViewModel(restaurant: restaurant)
         }
         return cell
     }
 }
 
+//MARK: - UICollectionViewDelegateFlowLayout
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = viewModel.calculateCellSize(collectionViewWidth: Double(collectionView.frame.size.width))
+        let size = presenter.calculateCellSize(collectionViewWidth: Double(collectionView.frame.size.width))
              return .init(width: size.width, height: size.height)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        .init(top: .zero, left: CGFloat(viewModel.cellPadding), bottom: .zero, right: CGFloat(viewModel.cellPadding))
+        .init(top: .zero, left: CGFloat(presenter.cellPadding), bottom: .zero, right: CGFloat(presenter.cellPadding))
     }
 }
 
+//MARK: - UICollectionViewDelegate
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        viewModel.willDisplay(indexPath.item)
+        presenter.willDisplay(indexPath.item)
     }
 }
 
-extension HomeViewController: HomeViewModelDelegate {
+//MARK: - HomeViewInterface
+extension HomeViewController: HomeViewInterface {
     func showLoadingView() {
         showLoading()
     }
