@@ -7,6 +7,22 @@
 
 import UIKit
 import SDWebImage
+
+//presenter -> RestaurantCollectionViewCellInterface
+protocol RestaurantCollectionViewCellInterface: AnyObject {
+    func prepareShadow()
+    func setTitleLabel(_ text: String)
+    func prepareBannerImage(with url: URL)
+    func prepareRating(rating: Double, ratingBackgroundColor: String)
+    func prepareRatingVisibility(isHidden: Bool)
+    func prepareCampaignView(campaignText: String)
+    func prepareCampaignViewVisibility(isHidden: Bool)
+    func prepareStatusView()
+    func prepareStatusViewVisibility(isHidden: Bool)
+    func setOpenDescriptionView(averageDeliveryInterval: String, minBasketPrice: String, kitchen: String)
+    func setClosedDescriptionView(workingHours: String, kitchen: String)
+}
+
 extension RestaurantCollectionViewCell {
     fileprivate enum Constants {
         enum Shadow {
@@ -37,10 +53,9 @@ final class RestaurantCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var statusImageView: UIImageView!
     @IBOutlet private weak var descriptionLabel: UILabel!
 
-    var viewModel: RestaurantCollectionViewCellViewModelProtocol! {
+    var presenter: RestaurantCollectionCellPresenterInterface! {
         didSet {
-            viewModel.delegate = self
-            viewModel.load()
+            presenter.load()
         }
     }
 
@@ -58,7 +73,7 @@ final class RestaurantCollectionViewCell: UICollectionViewCell {
     }
 }
 
-extension RestaurantCollectionViewCell: RestaurantCollectionViewCellViewModelDelegate {
+extension RestaurantCollectionViewCell: RestaurantCollectionViewCellInterface {
     func prepareShadow() {
         layer.shadowColor = UIColor.verySoftGray.cgColor
         layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: Constants.Shadow.cornerRadius).cgPath

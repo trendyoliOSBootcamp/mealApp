@@ -10,6 +10,7 @@
 		3B5D42EC265A73E7005D7A07 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D42EB265A73E7005D7A07 /* HomePresenter.swift */; };
 		3B5D42F4265A7403005D7A07 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D42F3265A7403005D7A07 /* HomeInteractor.swift */; };
 		3B5D42F9265A7421005D7A07 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D42F8265A7421005D7A07 /* HomeRouter.swift */; };
+		3B5D4304265A8EAE005D7A07 /* RestaurantCollectionCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D4303265A8EAE005D7A07 /* RestaurantCollectionCellPresenter.swift */; };
 		9B40C69F265904FA00404678 /* RestaurantCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B40C69D265904FA00404678 /* RestaurantCollectionViewCell.xib */; };
 		9B40C6A0265904FA00404678 /* RestaurantCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B40C69E265904FA00404678 /* RestaurantCollectionViewCell.swift */; };
 		9B40C6B226590CDE00404678 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B40C6A526590CDE00404678 /* UIFont+Extension.swift */; };
@@ -28,7 +29,6 @@
 		9B40C6F92659161000404678 /* StampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B40C6F82659161000404678 /* StampView.swift */; };
 		9B40C70226591F8E00404678 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9B40C70126591F8E00404678 /* SDWebImage */; };
 		BB93E970265A498200887ECE /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB93E96F265A498200887ECE /* Collection+Extension.swift */; };
-		BB93E975265A52B100887ECE /* RestaurantCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB93E974265A52B100887ECE /* RestaurantCollectionViewCellViewModel.swift */; };
 		DC55B60A2658EC0B00C5D2FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55B6092658EC0B00C5D2FD /* AppDelegate.swift */; };
 		DC55B60C2658EC0B00C5D2FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55B60B2658EC0B00C5D2FD /* SceneDelegate.swift */; };
 		DC55B60E2658EC0B00C5D2FD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55B60D2658EC0B00C5D2FD /* HomeViewController.swift */; };
@@ -63,6 +63,7 @@
 		3B5D42EB265A73E7005D7A07 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		3B5D42F3265A7403005D7A07 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		3B5D42F8265A7421005D7A07 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		3B5D4303265A8EAE005D7A07 /* RestaurantCollectionCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCollectionCellPresenter.swift; sourceTree = "<group>"; };
 		9B40C69D265904FA00404678 /* RestaurantCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestaurantCollectionViewCell.xib; sourceTree = "<group>"; };
 		9B40C69E265904FA00404678 /* RestaurantCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantCollectionViewCell.swift; sourceTree = "<group>"; };
 		9B40C6A526590CDE00404678 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
@@ -80,7 +81,6 @@
 		9B40C6F3265915E600404678 /* StampView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StampView.xib; sourceTree = "<group>"; };
 		9B40C6F82659161000404678 /* StampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampView.swift; sourceTree = "<group>"; };
 		BB93E96F265A498200887ECE /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
-		BB93E974265A52B100887ECE /* RestaurantCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		DC55B6062658EC0B00C5D2FD /* MealApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MealApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC55B6092658EC0B00C5D2FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC55B60B2658EC0B00C5D2FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +151,7 @@
 			children = (
 				DC55B60F2658EC0B00C5D2FD /* Main.storyboard */,
 				3B5D42E9265A73AB005D7A07 /* Home */,
+				3B5D430B265A92BE005D7A07 /* ProductDetail */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -177,12 +178,19 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		3B5D430B265A92BE005D7A07 /* ProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProductDetail;
+			sourceTree = "<group>";
+		};
 		9B40C69C265904FA00404678 /* RestaurantCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				9B40C69D265904FA00404678 /* RestaurantCollectionViewCell.xib */,
-				BB93E974265A52B100887ECE /* RestaurantCollectionViewCellViewModel.swift */,
 				9B40C69E265904FA00404678 /* RestaurantCollectionViewCell.swift */,
+				3B5D4303265A8EAE005D7A07 /* RestaurantCollectionCellPresenter.swift */,
 			);
 			path = RestaurantCollectionViewCell;
 			sourceTree = "<group>";
@@ -452,6 +460,7 @@
 				9B40C6B426590CDE00404678 /* UICollectionView+Extension.swift in Sources */,
 				3B5D42F4265A7403005D7A07 /* HomeInteractor.swift in Sources */,
 				9B40C6B226590CDE00404678 /* UIFont+Extension.swift in Sources */,
+				3B5D4304265A8EAE005D7A07 /* RestaurantCollectionCellPresenter.swift in Sources */,
 				DC55B60E2658EC0B00C5D2FD /* HomeViewController.swift in Sources */,
 				9B40C6BC26590CDE00404678 /* LoadingShowable.swift in Sources */,
 				DC55B60A2658EC0B00C5D2FD /* AppDelegate.swift in Sources */,
@@ -461,7 +470,6 @@
 				3B5D42F9265A7421005D7A07 /* HomeRouter.swift in Sources */,
 				DC55B63D2658F21100C5D2FD /* HomeEndpointItem.swift in Sources */,
 				BB93E970265A498200887ECE /* Collection+Extension.swift in Sources */,
-				BB93E975265A52B100887ECE /* RestaurantCollectionViewCellViewModel.swift in Sources */,
 				DC55B60C2658EC0B00C5D2FD /* SceneDelegate.swift in Sources */,
 				9B40C6B526590CDE00404678 /* UICollectionViewCell+Extension.swift in Sources */,
 				9B40C6D726590E8000404678 /* LoadingView.swift in Sources */,
