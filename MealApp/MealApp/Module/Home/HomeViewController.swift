@@ -42,7 +42,9 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeCell(cellType: RestaurantCollectionViewCell.self, indexPath: indexPath)
         if let restaurant = presenter.restaurant(indexPath.item) {
-            cell.viewModel = RestaurantCollectionViewCellViewModel(restaurant: restaurant)
+            cell.presenter = RestaurantCollectionCellPresenter(view: cell,
+                                                               restaurant: restaurant,
+                                                               delegate: self)
         }
         return cell
     }
@@ -96,4 +98,10 @@ extension HomeViewController: HomeViewInterface {
        refreshControl.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
        restaurantsCollectionView.refreshControl = refreshControl
    }
+}
+
+extension HomeViewController: RestaurantCollectionDelegate {
+    func favoriteButtonTapped() {
+      print("favoriteButtonTapped")
+    }
 }

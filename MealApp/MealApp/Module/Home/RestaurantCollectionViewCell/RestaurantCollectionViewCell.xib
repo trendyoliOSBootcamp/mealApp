@@ -56,13 +56,26 @@
                                                     <constraint firstAttribute="height" constant="23" id="nRB-fE-R7u"/>
                                                 </constraints>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iD1-3F-H3y">
+                                                <rect key="frame" x="305" y="10" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="fbu-ZH-H1d"/>
+                                                    <constraint firstAttribute="height" constant="30" id="fte-Q7-HC6"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="favoriteButtonTapped" destination="gTV-IL-0wX" eventType="touchUpInside" id="ues-gJ-D0B"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="TWA-Bo-lai" secondAttribute="bottom" id="Ajm-qu-t3P"/>
                                             <constraint firstAttribute="trailing" secondItem="TWA-Bo-lai" secondAttribute="trailing" id="Bws-KU-zj0"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tnV-bh-W8d" secondAttribute="trailing" constant="15" id="LF4-il-h4d"/>
+                                            <constraint firstItem="iD1-3F-H3y" firstAttribute="top" secondItem="pYL-0v-kt7" secondAttribute="top" constant="10" id="QCb-Fo-Zt8"/>
                                             <constraint firstItem="tnV-bh-W8d" firstAttribute="leading" secondItem="pYL-0v-kt7" secondAttribute="leading" constant="15" id="Zh2-dW-zgj"/>
+                                            <constraint firstAttribute="trailing" secondItem="iD1-3F-H3y" secondAttribute="trailing" constant="10" id="cvZ-89-pvQ"/>
                                             <constraint firstItem="TWA-Bo-lai" firstAttribute="leading" secondItem="pYL-0v-kt7" secondAttribute="leading" id="pby-QU-n8i"/>
                                             <constraint firstAttribute="bottom" secondItem="tnV-bh-W8d" secondAttribute="bottom" constant="10" id="tUY-UQ-IzJ"/>
                                             <constraint firstItem="TWA-Bo-lai" firstAttribute="top" secondItem="pYL-0v-kt7" secondAttribute="top" id="z4t-A1-sS0"/>

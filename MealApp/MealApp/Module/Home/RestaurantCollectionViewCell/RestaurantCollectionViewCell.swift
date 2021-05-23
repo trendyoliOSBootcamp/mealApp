@@ -71,6 +71,10 @@ final class RestaurantCollectionViewCell: UICollectionViewCell {
         descriptionLabel.textColor = .secondaryColor
         descriptionLabel.font = .regular(12)
     }
+
+    @IBAction func favoriteButtonTapped() {
+        presenter.favoriteButtonTapped()
+    }
 }
 
 extension RestaurantCollectionViewCell: RestaurantCollectionViewCellInterface {

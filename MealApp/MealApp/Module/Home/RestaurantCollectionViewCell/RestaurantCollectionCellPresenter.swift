@@ -10,16 +10,24 @@ import Foundation
 //Cell -> RestaurantCollectionCellPresenterInterface
 protocol RestaurantCollectionCellPresenterInterface {
     func load()
+    func favoriteButtonTapped()
+}
+
+protocol RestaurantCollectionDelegate: AnyObject {
+    func favoriteButtonTapped()
 }
 
 final class RestaurantCollectionCellPresenter {
     weak var view: RestaurantCollectionViewCellInterface?
+    weak var delegate: RestaurantCollectionDelegate?
     private let restaurant: Restaurant
 
     init(view: RestaurantCollectionViewCellInterface?,
-         restaurant: Restaurant) {
+         restaurant: Restaurant,
+         delegate: RestaurantCollectionDelegate?) {
         self.view = view
         self.restaurant = restaurant
+        self.delegate = delegate
     }
 
     private func setRestaurantRating() {
@@ -60,6 +68,10 @@ final class RestaurantCollectionCellPresenter {
 }
 
 extension RestaurantCollectionCellPresenter: RestaurantCollectionCellPresenterInterface {
+    func favoriteButtonTapped() {
+        delegate?.favoriteButtonTapped()
+    }
+
     func load() {
         view?.prepareShadow()
         if let imageUrlString = restaurant.imageUrl, let url = URL(string: imageUrlString) {
