@@ -19,13 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         let windowScene = UIWindowScene(session: session, connectionOptions: connectionOptions)
         self.window = UIWindow(windowScene: windowScene)
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let rootVC = storyboard.instantiateViewController(identifier: "HomeViewController") as? HomeViewController else {
-            return
-        }
-        let viewModel = HomeViewModel(networkManager: NetworkManager())
-        rootVC.viewModel = viewModel
-        self.window?.rootViewController = rootVC
+        let viewController = HomeRouter.createModule()
+        self.window?.rootViewController = viewController
         self.window?.makeKeyAndVisible()
         guard let _ = (scene as? UIWindowScene) else { return }
     }
