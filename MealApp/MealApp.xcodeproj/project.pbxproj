@@ -54,6 +54,7 @@
 		FBB94F502662434400608D73 /* SearchEndpointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB94F4F2662434400608D73 /* SearchEndpointItem.swift */; };
 		FBB94F5526624E5D00608D73 /* SearchSuggestionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB94F5426624E5D00608D73 /* SearchSuggestionResponse.swift */; };
 		FBB94F5A2662601300608D73 /* Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB94F592662601300608D73 /* Throttle.swift */; };
+		FBB94F5F266261BF00608D73 /* SearchPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB94F5E266261BF00608D73 /* SearchPresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		FBB94F4F2662434400608D73 /* SearchEndpointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEndpointItem.swift; sourceTree = "<group>"; };
 		FBB94F5426624E5D00608D73 /* SearchSuggestionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSuggestionResponse.swift; sourceTree = "<group>"; };
 		FBB94F592662601300608D73 /* Throttle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Throttle.swift; sourceTree = "<group>"; };
+		FBB94F5E266261BF00608D73 /* SearchPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 				3B5D42E9265A73AB005D7A07 /* Home */,
 				3B5D430B265A92BE005D7A07 /* ProductDetail */,
 				FBB94F0E26622CB300608D73 /* SearchSuggestion */,
+				FBB94F5E266261BF00608D73 /* SearchPresentable.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				DC55B60E2658EC0B00C5D2FD /* HomeViewController.swift in Sources */,
 				9B40C6BC26590CDE00404678 /* LoadingShowable.swift in Sources */,
 				DC55B60A2658EC0B00C5D2FD /* AppDelegate.swift in Sources */,
+				FBB94F5F266261BF00608D73 /* SearchPresentable.swift in Sources */,
 				DC55B63F2658F5A800C5D2FD /* Widget.swift in Sources */,
 				FBB94F5A2662601300608D73 /* Throttle.swift in Sources */,
 				9B40C6BB26590CDE00404678 /* NibView.swift in Sources */,

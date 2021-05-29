@@ -8,7 +8,7 @@
 import UIKit
 
 // HomePresenter -> HomeViewInterface
-protocol HomeViewInterface: AnyObject {
+protocol HomeViewInterface: AnyObject, SearchPresentable {
     func showLoadingView()
     func hideLoadingView()
     func reloadData()
@@ -16,7 +16,6 @@ protocol HomeViewInterface: AnyObject {
     func prepareCollectionView()
     func addRefreshControl()
     func setTitle(_ title: String)
-    func prepareSearchController()
     func prepareNavigationBarUI()
 }
 
@@ -31,11 +30,22 @@ class HomeViewController: UIViewController, LoadingShowable {
         super.viewDidLoad()
         presenter.viewDidLoad()
     }
+    
+    lazy var searchSuggestionVC: SearchSuggestionViewController = {
+        SearchSuggestionRouter.createModule(delegate: self)
+    }()
 
     @objc
     private func pullToRefresh() {
         presenter.pullToRefresh()
     }
+    
+    var searchSuggestionViewController: UIViewController? { searchSuggestionVC }
+    var searchResultUpdating: UISearchResultsUpdating { searchSuggestionVC }
+    var searchIcon: UIImage? { UIImage(named: "search") }
+    var horizontalPadding: CGFloat { 5 }
+    var placeholder: String { "Yemek Ara" }
+    var placeholderFont: UIFont { UIFont.bold(12) }
 }
 
 //MARK: - UICollectionViewDataSource
@@ -81,26 +91,6 @@ extension HomeViewController: HomeViewInterface {
         appearance.backgroundColor = .white
         navigationItem.standardAppearance = appearance
         navigationItem.scrollEdgeAppearance = appearance
-    }
-    
-    func prepareSearchController() {
-        let searchSuggestionViewController = SearchSuggestionRouter.createModule(delegate: self)
-        let searchController = UISearchController(searchResultsController: searchSuggestionViewController)
-        searchController.hidesNavigationBarDuringPresentation = false
-        searchController.obscuresBackgroundDuringPresentation = false
-        
-        searchController.searchResultsUpdater = searchSuggestionViewController
-        
-        searchController.searchBar.setImage(UIImage(named: "search"), for: .search, state: .normal)
-        searchController.searchBar.setPositionAdjustment(.init(horizontal: 5, vertical: 0), for: .search)
-        
-        searchController.searchBar.searchTextPositionAdjustment = .init(horizontal: 5, vertical: 0)
-        
-        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).title = "Vazgeç"
-        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).tintColor = UIColor.primaryColor
-        
-        navigationItem.searchController = searchController
-        self.searchController = searchController
     }
     
     func setTitle(_ title: String) {
