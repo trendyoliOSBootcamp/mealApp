@@ -82,11 +82,12 @@ extension HomeViewController: HomeViewInterface {
     }
     
     func prepareSearchController() {
-        let searchController = UISearchController(searchResultsController: SearchSuggestionRouter.createModule())
+        let searchSuggestionViewController = SearchSuggestionRouter.createModule()
+        let searchController = UISearchController(searchResultsController: searchSuggestionViewController)
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.obscuresBackgroundDuringPresentation = false
         
-        searchController.searchResultsUpdater = self
+        searchController.searchResultsUpdater = searchSuggestionViewController
         
         searchController.searchBar.setImage(UIImage(named: "search"), for: .search, state: .normal)
         searchController.searchBar.setPositionAdjustment(.init(horizontal: 5, vertical: 0), for: .search)
@@ -136,8 +137,4 @@ extension HomeViewController: RestaurantCollectionDelegate {
     func favoriteButtonTapped() {
       print("favoriteButtonTapped")
     }
-}
-
-extension HomeViewController: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) { }
 }

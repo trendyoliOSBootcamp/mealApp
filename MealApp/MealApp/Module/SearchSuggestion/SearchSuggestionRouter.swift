@@ -19,6 +19,7 @@ class SearchSuggestionRouter {
         let presenter = SearchSuggestionPresenter(view: viewController, router: router, interactor: interactor)
         
         viewController.presenter = presenter
+        interactor.output = presenter
         
         return viewController
     }

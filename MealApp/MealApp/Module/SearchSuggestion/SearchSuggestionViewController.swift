@@ -42,7 +42,7 @@ extension SearchSuggestionViewController: SearchSuggestionViewInterface {
 
 extension SearchSuggestionViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        2
+        presenter.numberOfSections
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -50,17 +50,20 @@ extension SearchSuggestionViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        // Restaurant Section
-        if indexPath.section == 0 {
+        switch presenter.sectionType(at: indexPath.section) {
+        case .restaurant:
             let cell = collectionView.dequeCell(cellType: RestaurantSuggestionCell.self, indexPath: indexPath)
+            cell.load(searchItem: presenter.item(at: indexPath))
             return cell
-        } else {
+        case .text:
             let cell = collectionView.dequeCell(cellType: BasicSuggestionCell.self, indexPath: indexPath)
+            cell.load(item: presenter.item(at: indexPath))
             return cell
         }
     }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let reusableView = collectionView.dequeView(cellType: SuggestionHeaderView.self, indexPath: indexPath)
+        reusableView.load(title: presenter.suggestion(at: indexPath.section)?.title ?? "")
         return reusableView
     }
 }
@@ -81,5 +84,11 @@ extension SearchSuggestionViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return .zero
+    }
+}
+
+extension SearchSuggestionViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        presenter.updateSearchResults(searchText: searchController.searchBar.text)
     }
 }

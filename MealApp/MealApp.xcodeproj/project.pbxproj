@@ -51,6 +51,8 @@
 		FBB94F4126623C4700608D73 /* BasicSuggestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB94F3F26623C4700608D73 /* BasicSuggestionCell.swift */; };
 		FBB94F4226623C4700608D73 /* BasicSuggestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBB94F4026623C4700608D73 /* BasicSuggestionCell.xib */; };
 		FBB94F4B26623DD600608D73 /* UICollectionReusableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB94F4A26623DD500608D73 /* UICollectionReusableView+Extension.swift */; };
+		FBB94F502662434400608D73 /* SearchEndpointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB94F4F2662434400608D73 /* SearchEndpointItem.swift */; };
+		FBB94F5526624E5D00608D73 /* SearchSuggestionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB94F5426624E5D00608D73 /* SearchSuggestionResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +121,8 @@
 		FBB94F3F26623C4700608D73 /* BasicSuggestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSuggestionCell.swift; sourceTree = "<group>"; };
 		FBB94F4026623C4700608D73 /* BasicSuggestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicSuggestionCell.xib; sourceTree = "<group>"; };
 		FBB94F4A26623DD500608D73 /* UICollectionReusableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionReusableView+Extension.swift"; sourceTree = "<group>"; };
+		FBB94F4F2662434400608D73 /* SearchEndpointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEndpointItem.swift; sourceTree = "<group>"; };
+		FBB94F5426624E5D00608D73 /* SearchSuggestionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSuggestionResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -347,6 +351,8 @@
 				FBB94F30266233C700608D73 /* SuggestionHeaderView */,
 				FBB94F3B2662353100608D73 /* RestaurantSuggestionCell */,
 				FBB94F4626623C4D00608D73 /* BasicSuggestionCell */,
+				FBB94F4F2662434400608D73 /* SearchEndpointItem.swift */,
+				FBB94F5426624E5D00608D73 /* SearchSuggestionResponse.swift */,
 			);
 			path = SearchSuggestion;
 			sourceTree = "<group>";
@@ -526,9 +532,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBB94F0A26622CAD00608D73 /* SearchSuggestionViewController.swift in Sources */,
+				FBB94F502662434400608D73 /* SearchEndpointItem.swift in Sources */,
 				FBB94F2B266233BA00608D73 /* SuggestionHeaderView.swift in Sources */,
 				9B40C6B426590CDE00404678 /* UICollectionView+Extension.swift in Sources */,
 				3B5D42F4265A7403005D7A07 /* HomeInteractor.swift in Sources */,
+				FBB94F5526624E5D00608D73 /* SearchSuggestionResponse.swift in Sources */,
 				FBB94F4B26623DD600608D73 /* UICollectionReusableView+Extension.swift in Sources */,
 				9B40C6B226590CDE00404678 /* UIFont+Extension.swift in Sources */,
 				3B5D4304265A8EAE005D7A07 /* RestaurantCollectionCellPresenter.swift in Sources */,

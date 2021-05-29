@@ -16,4 +16,8 @@ class BasicSuggestionCell: UICollectionViewCell {
         titleLabel.font = UIFont.semibold(14)
         titleLabel.textColor = UIColor.secondaryColor
     }
+    
+    func load(item: SearchItem?) {
+        titleLabel.text = item?.title
+    }
 }

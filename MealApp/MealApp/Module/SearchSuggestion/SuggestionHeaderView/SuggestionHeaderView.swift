@@ -15,4 +15,8 @@ class SuggestionHeaderView: UICollectionReusableView {
         titleLabel.textColor = UIColor.secondaryColor
         titleLabel.font = UIFont.bold(14)
     }
+    
+    func load(title: String) {
+        titleLabel.text = title
+    }
 }
