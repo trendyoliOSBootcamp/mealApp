@@ -71,6 +71,8 @@ extension HomePresenter: HomePresenterInterface {
     }
 
     func viewDidLoad() {
+        view?.setTitle("Home")
+        view?.prepareSearchController()
         view?.prepareCollectionView()
         view?.addRefreshControl()
         fetchWidgets(query: href)

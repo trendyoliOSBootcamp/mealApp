@@ -15,6 +15,8 @@ protocol HomeViewInterface: AnyObject {
     func endRefreshing()
     func prepareCollectionView()
     func addRefreshControl()
+    func setTitle(_ title: String)
+    func prepareSearchController()
 }
 
 class HomeViewController: UIViewController, LoadingShowable {
@@ -25,6 +27,11 @@ class HomeViewController: UIViewController, LoadingShowable {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .white
+        navigationItem.standardAppearance = appearance
+        navigationItem.scrollEdgeAppearance = appearance
     }
 
     @objc
@@ -58,7 +65,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        .init(top: .zero, left: CGFloat(presenter.cellPadding), bottom: .zero, right: CGFloat(presenter.cellPadding))
+        .init(top: CGFloat(presenter.cellPadding), left: CGFloat(presenter.cellPadding), bottom: .zero, right: CGFloat(presenter.cellPadding))
     }
 }
 
@@ -71,6 +78,26 @@ extension HomeViewController: UICollectionViewDelegate {
 
 //MARK: - HomeViewInterface
 extension HomeViewController: HomeViewInterface {
+    func prepareSearchController() {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.obscuresBackgroundDuringPresentation = false
+        
+        searchController.searchBar.setImage(UIImage(named: "search"), for: .search, state: .normal)
+        searchController.searchBar.setPositionAdjustment(.init(horizontal: 5, vertical: 0), for: .search)
+        
+        searchController.searchBar.searchTextPositionAdjustment = .init(horizontal: 5, vertical: 0)
+        
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).title = "Vazgeç"
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).tintColor = UIColor.primaryColor
+        
+        navigationItem.searchController = searchController
+    }
+    
+    func setTitle(_ title: String) {
+        self.title = title
+    }
+    
     func showLoadingView() {
         showLoading()
     }
