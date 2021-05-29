@@ -17,4 +17,15 @@ extension UICollectionView {
         }
         return cell
     }
+    
+    func registerView(cellType: UICollectionReusableView.Type, kind: String = UICollectionView.elementKindSectionHeader) {
+        register(cellType.nib, forSupplementaryViewOfKind: kind, withReuseIdentifier: cellType.identifier)
+    }
+    
+    func dequeView<T: UICollectionReusableView>(cellType: T.Type, kind: String = UICollectionView.elementKindSectionHeader, indexPath: IndexPath) -> T {
+        guard let reusableView = dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: cellType.identifier, for: indexPath) as? T else {
+            fatalError()
+        }
+        return reusableView
+    }
 }

@@ -48,6 +48,9 @@
 		FBB94F2C266233BA00608D73 /* SuggestionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBB94F2A266233BA00608D73 /* SuggestionHeaderView.xib */; };
 		FBB94F362662352B00608D73 /* RestaurantSuggestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB94F342662352B00608D73 /* RestaurantSuggestionCell.swift */; };
 		FBB94F372662352B00608D73 /* RestaurantSuggestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBB94F352662352B00608D73 /* RestaurantSuggestionCell.xib */; };
+		FBB94F4126623C4700608D73 /* BasicSuggestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB94F3F26623C4700608D73 /* BasicSuggestionCell.swift */; };
+		FBB94F4226623C4700608D73 /* BasicSuggestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBB94F4026623C4700608D73 /* BasicSuggestionCell.xib */; };
+		FBB94F4B26623DD600608D73 /* UICollectionReusableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB94F4A26623DD500608D73 /* UICollectionReusableView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +116,9 @@
 		FBB94F2A266233BA00608D73 /* SuggestionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionHeaderView.xib; sourceTree = "<group>"; };
 		FBB94F342662352B00608D73 /* RestaurantSuggestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantSuggestionCell.swift; sourceTree = "<group>"; };
 		FBB94F352662352B00608D73 /* RestaurantSuggestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantSuggestionCell.xib; sourceTree = "<group>"; };
+		FBB94F3F26623C4700608D73 /* BasicSuggestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSuggestionCell.swift; sourceTree = "<group>"; };
+		FBB94F4026623C4700608D73 /* BasicSuggestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicSuggestionCell.xib; sourceTree = "<group>"; };
+		FBB94F4A26623DD500608D73 /* UICollectionReusableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionReusableView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +225,7 @@
 				9B40C6A626590CDE00404678 /* UIColor+Extension.swift */,
 				9B40C6A726590CDE00404678 /* UICollectionView+Extension.swift */,
 				9B40C6A826590CDE00404678 /* UICollectionViewCell+Extension.swift */,
+				FBB94F4A26623DD500608D73 /* UICollectionReusableView+Extension.swift */,
 				BB93E96F265A498200887ECE /* Collection+Extension.swift */,
 			);
 			path = Extensions;
@@ -339,6 +346,7 @@
 				FBB94F1C2662301B00608D73 /* SearchSuggestionInteractor.swift */,
 				FBB94F30266233C700608D73 /* SuggestionHeaderView */,
 				FBB94F3B2662353100608D73 /* RestaurantSuggestionCell */,
+				FBB94F4626623C4D00608D73 /* BasicSuggestionCell */,
 			);
 			path = SearchSuggestion;
 			sourceTree = "<group>";
@@ -359,6 +367,15 @@
 				FBB94F352662352B00608D73 /* RestaurantSuggestionCell.xib */,
 			);
 			path = RestaurantSuggestionCell;
+			sourceTree = "<group>";
+		};
+		FBB94F4626623C4D00608D73 /* BasicSuggestionCell */ = {
+			isa = PBXGroup;
+			children = (
+				FBB94F3F26623C4700608D73 /* BasicSuggestionCell.swift */,
+				FBB94F4026623C4700608D73 /* BasicSuggestionCell.xib */,
+			);
+			path = BasicSuggestionCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,6 +493,7 @@
 				FBB94F372662352B00608D73 /* RestaurantSuggestionCell.xib in Resources */,
 				9B40C6B926590CDE00404678 /* Lato-Semibold.ttf in Resources */,
 				9B40C6B726590CDE00404678 /* Lato-Bold.ttf in Resources */,
+				FBB94F4226623C4700608D73 /* BasicSuggestionCell.xib in Resources */,
 				9B40C6BA26590CDE00404678 /* Lato-Light.ttf in Resources */,
 				DC55B6132658EC0D00C5D2FD /* Assets.xcassets in Resources */,
 				9B40C6B626590CDE00404678 /* Lato-Thin.ttf in Resources */,
@@ -511,6 +529,7 @@
 				FBB94F2B266233BA00608D73 /* SuggestionHeaderView.swift in Sources */,
 				9B40C6B426590CDE00404678 /* UICollectionView+Extension.swift in Sources */,
 				3B5D42F4265A7403005D7A07 /* HomeInteractor.swift in Sources */,
+				FBB94F4B26623DD600608D73 /* UICollectionReusableView+Extension.swift in Sources */,
 				9B40C6B226590CDE00404678 /* UIFont+Extension.swift in Sources */,
 				3B5D4304265A8EAE005D7A07 /* RestaurantCollectionCellPresenter.swift in Sources */,
 				DC55B60E2658EC0B00C5D2FD /* HomeViewController.swift in Sources */,
@@ -529,6 +548,7 @@
 				9B40C6D726590E8000404678 /* LoadingView.swift in Sources */,
 				9B40C6F92659161000404678 /* StampView.swift in Sources */,
 				3B5D42EC265A73E7005D7A07 /* HomePresenter.swift in Sources */,
+				FBB94F4126623C4700608D73 /* BasicSuggestionCell.swift in Sources */,
 				FBB94F1D2662301B00608D73 /* SearchSuggestionInteractor.swift in Sources */,
 				FBB94F362662352B00608D73 /* RestaurantSuggestionCell.swift in Sources */,
 				9B40C6B326590CDE00404678 /* UIColor+Extension.swift in Sources */,

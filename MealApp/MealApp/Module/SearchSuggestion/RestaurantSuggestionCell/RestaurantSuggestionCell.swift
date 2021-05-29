@@ -16,6 +16,13 @@ class RestaurantSuggestionCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        restaurantNameLabel.font = UIFont.bold(14)
+        restaurantNameLabel.textColor = UIColor.secondaryColor
+        
+        kitchenLabel.font = UIFont.regular(10)
+        kitchenLabel.textColor = UIColor.softGray
+        
+        restaurantImageView.layer.cornerRadius = 10
+        restaurantImageView.layer.masksToBounds = true
     }
 }

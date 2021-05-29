@@ -15,6 +15,10 @@ extension UIColor {
     class var secondaryColor: UIColor {
         UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1)
     }
+    
+    class var softGray: UIColor {
+        UIColor(red: 102/255, green: 102/255, blue: 102/255, alpha: 1)
+    }
 
     class var verySoftGray: UIColor {
         UIColor(red: 230/255, green: 230/255 , blue: 230/255, alpha: 1)
