@@ -12,11 +12,11 @@ protocol SearchSuggestionRouterInterface {
 }
 
 class SearchSuggestionRouter {
-    static func createModule() -> SearchSuggestionViewController {
+    static func createModule(delegate: SearchSuggestionDelegate?) -> SearchSuggestionViewController {
         let viewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SearchSuggestionViewController") as! SearchSuggestionViewController
         let router = SearchSuggestionRouter()
         let interactor = SearchSuggestionInteractor()
-        let presenter = SearchSuggestionPresenter(view: viewController, router: router, interactor: interactor)
+        let presenter = SearchSuggestionPresenter(view: viewController, router: router, interactor: interactor, delegate: delegate)
         
         viewController.presenter = presenter
         interactor.output = presenter

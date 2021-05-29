@@ -19,19 +19,26 @@ protocol SearchSuggestionPresenterInterface {
     func item(at indexPath: IndexPath) -> SearchItem?
     func suggestion(at section: Int) -> Suggestion?
     func sectionType(at section: Int) -> SuggestionType
+    func didSelectItem(at indexPath: IndexPath)
+}
+
+protocol SearchSuggestionDelegate: AnyObject {
+    func searchSuggestionItemTapped(item: SearchItem)
 }
 
 class SearchSuggestionPresenter {
     weak var view: SearchSuggestionViewInterface?
     let router: SearchSuggestionRouterInterface
     let interactor: SearchSuggestionInteractorInterface
+    private weak var delegate: SearchSuggestionDelegate?
     
     var suggestions: [Suggestion]?
     
-    init(view: SearchSuggestionViewInterface?, router: SearchSuggestionRouterInterface, interactor: SearchSuggestionInteractorInterface) {
+    init(view: SearchSuggestionViewInterface?, router: SearchSuggestionRouterInterface, interactor: SearchSuggestionInteractorInterface, delegate: SearchSuggestionDelegate?) {
         self.view = view
         self.router = router
         self.interactor = interactor
+        self.delegate = delegate
     }
 }
 
@@ -80,6 +87,11 @@ extension SearchSuggestionPresenter: SearchSuggestionPresenterInterface {
     func sectionType(at section: Int) -> SuggestionType {
         guard let suggestions = suggestions else { return .text }
         return suggestions[section].type
+    }
+    
+    func didSelectItem(at indexPath: IndexPath) {
+        guard let item = item(at: indexPath) else { return }
+        delegate?.searchSuggestionItemTapped(item: item)
     }
 }
 

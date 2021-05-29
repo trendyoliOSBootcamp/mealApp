@@ -12,14 +12,13 @@ enum SearchEndpointItem: Endpoint {
     
     var baseUrl: String { "https://us-central1-infumar.cloudfunctions.net/" }
     
-    var path: String {"suggestions" }
-    
-    var method: HTTPMethod { .get }
-    
-    var parameters: [String : Any] {
+    var path: String {
         switch self {
         case .suggestions(let keyword):
-            return ["text": keyword]
+            return "suggestions?text=\(keyword.lowercased())"
         }
+
     }
+    
+    var method: HTTPMethod { .get }
 }

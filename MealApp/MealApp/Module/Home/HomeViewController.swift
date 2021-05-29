@@ -22,6 +22,8 @@ protocol HomeViewInterface: AnyObject {
 
 class HomeViewController: UIViewController, LoadingShowable {
     @IBOutlet private weak var restaurantsCollectionView: UICollectionView!
+    
+    var searchController: UISearchController?
 
     var presenter: HomePresenterInterface!
 
@@ -82,7 +84,7 @@ extension HomeViewController: HomeViewInterface {
     }
     
     func prepareSearchController() {
-        let searchSuggestionViewController = SearchSuggestionRouter.createModule()
+        let searchSuggestionViewController = SearchSuggestionRouter.createModule(delegate: self)
         let searchController = UISearchController(searchResultsController: searchSuggestionViewController)
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.obscuresBackgroundDuringPresentation = false
@@ -98,6 +100,7 @@ extension HomeViewController: HomeViewInterface {
         UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).tintColor = UIColor.primaryColor
         
         navigationItem.searchController = searchController
+        self.searchController = searchController
     }
     
     func setTitle(_ title: String) {
@@ -136,5 +139,12 @@ extension HomeViewController: HomeViewInterface {
 extension HomeViewController: RestaurantCollectionDelegate {
     func favoriteButtonTapped() {
       print("favoriteButtonTapped")
+    }
+}
+
+extension HomeViewController:  SearchSuggestionDelegate {
+    func searchSuggestionItemTapped(item: SearchItem) {
+        print("searchSuggestionItemTapped: \(item.title)")
+        searchController?.isActive = false
     }
 }
