@@ -44,6 +44,10 @@
 		FBB94F132662300900608D73 /* SearchSuggestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB94F122662300900608D73 /* SearchSuggestionPresenter.swift */; };
 		FBB94F182662301200608D73 /* SearchSuggestionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB94F172662301200608D73 /* SearchSuggestionRouter.swift */; };
 		FBB94F1D2662301B00608D73 /* SearchSuggestionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB94F1C2662301B00608D73 /* SearchSuggestionInteractor.swift */; };
+		FBB94F2B266233BA00608D73 /* SuggestionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB94F29266233BA00608D73 /* SuggestionHeaderView.swift */; };
+		FBB94F2C266233BA00608D73 /* SuggestionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBB94F2A266233BA00608D73 /* SuggestionHeaderView.xib */; };
+		FBB94F362662352B00608D73 /* RestaurantSuggestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB94F342662352B00608D73 /* RestaurantSuggestionCell.swift */; };
+		FBB94F372662352B00608D73 /* RestaurantSuggestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBB94F352662352B00608D73 /* RestaurantSuggestionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +109,10 @@
 		FBB94F122662300900608D73 /* SearchSuggestionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSuggestionPresenter.swift; sourceTree = "<group>"; };
 		FBB94F172662301200608D73 /* SearchSuggestionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSuggestionRouter.swift; sourceTree = "<group>"; };
 		FBB94F1C2662301B00608D73 /* SearchSuggestionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSuggestionInteractor.swift; sourceTree = "<group>"; };
+		FBB94F29266233BA00608D73 /* SuggestionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionHeaderView.swift; sourceTree = "<group>"; };
+		FBB94F2A266233BA00608D73 /* SuggestionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionHeaderView.xib; sourceTree = "<group>"; };
+		FBB94F342662352B00608D73 /* RestaurantSuggestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantSuggestionCell.swift; sourceTree = "<group>"; };
+		FBB94F352662352B00608D73 /* RestaurantSuggestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantSuggestionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,8 +337,28 @@
 				FBB94F122662300900608D73 /* SearchSuggestionPresenter.swift */,
 				FBB94F172662301200608D73 /* SearchSuggestionRouter.swift */,
 				FBB94F1C2662301B00608D73 /* SearchSuggestionInteractor.swift */,
+				FBB94F30266233C700608D73 /* SuggestionHeaderView */,
+				FBB94F3B2662353100608D73 /* RestaurantSuggestionCell */,
 			);
 			path = SearchSuggestion;
+			sourceTree = "<group>";
+		};
+		FBB94F30266233C700608D73 /* SuggestionHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				FBB94F29266233BA00608D73 /* SuggestionHeaderView.swift */,
+				FBB94F2A266233BA00608D73 /* SuggestionHeaderView.xib */,
+			);
+			path = SuggestionHeaderView;
+			sourceTree = "<group>";
+		};
+		FBB94F3B2662353100608D73 /* RestaurantSuggestionCell */ = {
+			isa = PBXGroup;
+			children = (
+				FBB94F342662352B00608D73 /* RestaurantSuggestionCell.swift */,
+				FBB94F352662352B00608D73 /* RestaurantSuggestionCell.xib */,
+			);
+			path = RestaurantSuggestionCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,7 +471,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBB94F2C266233BA00608D73 /* SuggestionHeaderView.xib in Resources */,
 				DC55B6162658EC0D00C5D2FD /* LaunchScreen.storyboard in Resources */,
+				FBB94F372662352B00608D73 /* RestaurantSuggestionCell.xib in Resources */,
 				9B40C6B926590CDE00404678 /* Lato-Semibold.ttf in Resources */,
 				9B40C6B726590CDE00404678 /* Lato-Bold.ttf in Resources */,
 				9B40C6BA26590CDE00404678 /* Lato-Light.ttf in Resources */,
@@ -478,6 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBB94F0A26622CAD00608D73 /* SearchSuggestionViewController.swift in Sources */,
+				FBB94F2B266233BA00608D73 /* SuggestionHeaderView.swift in Sources */,
 				9B40C6B426590CDE00404678 /* UICollectionView+Extension.swift in Sources */,
 				3B5D42F4265A7403005D7A07 /* HomeInteractor.swift in Sources */,
 				9B40C6B226590CDE00404678 /* UIFont+Extension.swift in Sources */,
@@ -499,6 +530,7 @@
 				9B40C6F92659161000404678 /* StampView.swift in Sources */,
 				3B5D42EC265A73E7005D7A07 /* HomePresenter.swift in Sources */,
 				FBB94F1D2662301B00608D73 /* SearchSuggestionInteractor.swift in Sources */,
+				FBB94F362662352B00608D73 /* RestaurantSuggestionCell.swift in Sources */,
 				9B40C6B326590CDE00404678 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

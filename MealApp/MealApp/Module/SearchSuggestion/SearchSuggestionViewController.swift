@@ -12,6 +12,8 @@ protocol SearchSuggestionViewInterface: AnyObject {
 }
 
 final class SearchSuggestionViewController: UIViewController {
+    @IBOutlet private weak var collectionView: UICollectionView!
+    
     var presenter: SearchSuggestionPresenterInterface!
     
     override func viewDidLoad() {
