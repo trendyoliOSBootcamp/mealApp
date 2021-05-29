@@ -256,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				9B40C6B026590CDE00404678 /* NibView.swift */,
+				FBB94F592662601300608D73 /* Throttle.swift */,
 				9B40C6B126590CDE00404678 /* LoadingShowable.swift */,
 			);
 			path = Utils;
@@ -350,15 +351,11 @@
 			isa = PBXGroup;
 			children = (
 				FBB94F0926622CAD00608D73 /* SearchSuggestionViewController.swift */,
-				FBB94F592662601300608D73 /* Throttle.swift */,
 				FBB94F122662300900608D73 /* SearchSuggestionPresenter.swift */,
 				FBB94F172662301200608D73 /* SearchSuggestionRouter.swift */,
 				FBB94F1C2662301B00608D73 /* SearchSuggestionInteractor.swift */,
-				FBB94F30266233C700608D73 /* SuggestionHeaderView */,
-				FBB94F3B2662353100608D73 /* RestaurantSuggestionCell */,
-				FBB94F4626623C4D00608D73 /* BasicSuggestionCell */,
-				FBB94F4F2662434400608D73 /* SearchEndpointItem.swift */,
-				FBB94F5426624E5D00608D73 /* SearchSuggestionResponse.swift */,
+				FBB94F67266266BE00608D73 /* Views */,
+				FBB94F63266266B700608D73 /* Rest */,
 			);
 			path = SearchSuggestion;
 			sourceTree = "<group>";
@@ -388,6 +385,25 @@
 				FBB94F4026623C4700608D73 /* BasicSuggestionCell.xib */,
 			);
 			path = BasicSuggestionCell;
+			sourceTree = "<group>";
+		};
+		FBB94F63266266B700608D73 /* Rest */ = {
+			isa = PBXGroup;
+			children = (
+				FBB94F4F2662434400608D73 /* SearchEndpointItem.swift */,
+				FBB94F5426624E5D00608D73 /* SearchSuggestionResponse.swift */,
+			);
+			path = Rest;
+			sourceTree = "<group>";
+		};
+		FBB94F67266266BE00608D73 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FBB94F30266233C700608D73 /* SuggestionHeaderView */,
+				FBB94F3B2662353100608D73 /* RestaurantSuggestionCell */,
+				FBB94F4626623C4D00608D73 /* BasicSuggestionCell */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
