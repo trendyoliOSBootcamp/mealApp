@@ -71,6 +71,7 @@ extension HomePresenter: HomePresenterInterface {
     }
 
     func viewDidLoad() {
+        view?.prepareNavigationBarUI()
         view?.setTitle("Home")
         view?.prepareSearchController()
         view?.prepareCollectionView()

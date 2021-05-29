@@ -40,6 +40,10 @@
 		DC55B63B2658ED9700C5D2FD /* CoreApi in Frameworks */ = {isa = PBXBuildFile; productRef = DC55B63A2658ED9700C5D2FD /* CoreApi */; };
 		DC55B63D2658F21100C5D2FD /* HomeEndpointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55B63C2658F21100C5D2FD /* HomeEndpointItem.swift */; };
 		DC55B63F2658F5A800C5D2FD /* Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55B63E2658F5A800C5D2FD /* Widget.swift */; };
+		FBB94F0A26622CAD00608D73 /* SearchSuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB94F0926622CAD00608D73 /* SearchSuggestionViewController.swift */; };
+		FBB94F132662300900608D73 /* SearchSuggestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB94F122662300900608D73 /* SearchSuggestionPresenter.swift */; };
+		FBB94F182662301200608D73 /* SearchSuggestionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB94F172662301200608D73 /* SearchSuggestionRouter.swift */; };
+		FBB94F1D2662301B00608D73 /* SearchSuggestionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB94F1C2662301B00608D73 /* SearchSuggestionInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +101,10 @@
 		DC55B62D2658EC0D00C5D2FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC55B63C2658F21100C5D2FD /* HomeEndpointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEndpointItem.swift; sourceTree = "<group>"; };
 		DC55B63E2658F5A800C5D2FD /* Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widget.swift; sourceTree = "<group>"; };
+		FBB94F0926622CAD00608D73 /* SearchSuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSuggestionViewController.swift; sourceTree = "<group>"; };
+		FBB94F122662300900608D73 /* SearchSuggestionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSuggestionPresenter.swift; sourceTree = "<group>"; };
+		FBB94F172662301200608D73 /* SearchSuggestionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSuggestionRouter.swift; sourceTree = "<group>"; };
+		FBB94F1C2662301B00608D73 /* SearchSuggestionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSuggestionInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +160,7 @@
 				DC55B60F2658EC0B00C5D2FD /* Main.storyboard */,
 				3B5D42E9265A73AB005D7A07 /* Home */,
 				3B5D430B265A92BE005D7A07 /* ProductDetail */,
+				FBB94F0E26622CB300608D73 /* SearchSuggestion */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -313,6 +322,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FBB94F0E26622CB300608D73 /* SearchSuggestion */ = {
+			isa = PBXGroup;
+			children = (
+				FBB94F0926622CAD00608D73 /* SearchSuggestionViewController.swift */,
+				FBB94F122662300900608D73 /* SearchSuggestionPresenter.swift */,
+				FBB94F172662301200608D73 /* SearchSuggestionRouter.swift */,
+				FBB94F1C2662301B00608D73 /* SearchSuggestionInteractor.swift */,
+			);
+			path = SearchSuggestion;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -457,6 +477,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBB94F0A26622CAD00608D73 /* SearchSuggestionViewController.swift in Sources */,
 				9B40C6B426590CDE00404678 /* UICollectionView+Extension.swift in Sources */,
 				3B5D42F4265A7403005D7A07 /* HomeInteractor.swift in Sources */,
 				9B40C6B226590CDE00404678 /* UIFont+Extension.swift in Sources */,
@@ -468,13 +489,16 @@
 				9B40C6BB26590CDE00404678 /* NibView.swift in Sources */,
 				9B40C6A0265904FA00404678 /* RestaurantCollectionViewCell.swift in Sources */,
 				3B5D42F9265A7421005D7A07 /* HomeRouter.swift in Sources */,
+				FBB94F132662300900608D73 /* SearchSuggestionPresenter.swift in Sources */,
 				DC55B63D2658F21100C5D2FD /* HomeEndpointItem.swift in Sources */,
+				FBB94F182662301200608D73 /* SearchSuggestionRouter.swift in Sources */,
 				BB93E970265A498200887ECE /* Collection+Extension.swift in Sources */,
 				DC55B60C2658EC0B00C5D2FD /* SceneDelegate.swift in Sources */,
 				9B40C6B526590CDE00404678 /* UICollectionViewCell+Extension.swift in Sources */,
 				9B40C6D726590E8000404678 /* LoadingView.swift in Sources */,
 				9B40C6F92659161000404678 /* StampView.swift in Sources */,
 				3B5D42EC265A73E7005D7A07 /* HomePresenter.swift in Sources */,
+				FBB94F1D2662301B00608D73 /* SearchSuggestionInteractor.swift in Sources */,
 				9B40C6B326590CDE00404678 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

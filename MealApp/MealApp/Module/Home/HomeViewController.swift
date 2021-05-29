@@ -17,6 +17,7 @@ protocol HomeViewInterface: AnyObject {
     func addRefreshControl()
     func setTitle(_ title: String)
     func prepareSearchController()
+    func prepareNavigationBarUI()
 }
 
 class HomeViewController: UIViewController, LoadingShowable {
@@ -27,11 +28,6 @@ class HomeViewController: UIViewController, LoadingShowable {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
-        
-        let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = .white
-        navigationItem.standardAppearance = appearance
-        navigationItem.scrollEdgeAppearance = appearance
     }
 
     @objc
@@ -78,10 +74,19 @@ extension HomeViewController: UICollectionViewDelegate {
 
 //MARK: - HomeViewInterface
 extension HomeViewController: HomeViewInterface {
+    func prepareNavigationBarUI() {
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .white
+        navigationItem.standardAppearance = appearance
+        navigationItem.scrollEdgeAppearance = appearance
+    }
+    
     func prepareSearchController() {
-        let searchController = UISearchController(searchResultsController: nil)
+        let searchController = UISearchController(searchResultsController: SearchSuggestionRouter.createModule())
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.obscuresBackgroundDuringPresentation = false
+        
+        searchController.searchResultsUpdater = self
         
         searchController.searchBar.setImage(UIImage(named: "search"), for: .search, state: .normal)
         searchController.searchBar.setPositionAdjustment(.init(horizontal: 5, vertical: 0), for: .search)
@@ -131,4 +136,8 @@ extension HomeViewController: RestaurantCollectionDelegate {
     func favoriteButtonTapped() {
       print("favoriteButtonTapped")
     }
+}
+
+extension HomeViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) { }
 }

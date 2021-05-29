@@ -46,6 +46,21 @@
             </objects>
             <point key="canvasLocation" x="86.956521739130437" y="133.92857142857142"/>
         </scene>
+        <!--Search Suggestion View Controller-->
+        <scene sceneID="yAY-fg-Obf">
+            <objects>
+                <viewController storyboardIdentifier="SearchSuggestionViewController" id="1O6-iW-5gm" customClass="SearchSuggestionViewController" customModule="MealApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m1O-UF-NlU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ApV-h8-jxO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kEc-jO-rgl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="914" y="134"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
