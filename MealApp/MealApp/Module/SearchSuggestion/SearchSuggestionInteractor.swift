@@ -17,7 +17,7 @@ protocol SearchSuggestionInteractorOutput: AnyObject {
 
 typealias SearchSuggestionResult = Result<SearchSuggestionResponse, APIClientError>
 
-class SearchSuggestionInteractor {
+final class SearchSuggestionInteractor {
     let networkManager: NetworkManager<SearchEndpointItem>
     weak var output: SearchSuggestionInteractorOutput?
     

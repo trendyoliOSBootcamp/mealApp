@@ -53,6 +53,7 @@
 		FBB94F4B26623DD600608D73 /* UICollectionReusableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB94F4A26623DD500608D73 /* UICollectionReusableView+Extension.swift */; };
 		FBB94F502662434400608D73 /* SearchEndpointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB94F4F2662434400608D73 /* SearchEndpointItem.swift */; };
 		FBB94F5526624E5D00608D73 /* SearchSuggestionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB94F5426624E5D00608D73 /* SearchSuggestionResponse.swift */; };
+		FBB94F5A2662601300608D73 /* Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB94F592662601300608D73 /* Throttle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		FBB94F4A26623DD500608D73 /* UICollectionReusableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionReusableView+Extension.swift"; sourceTree = "<group>"; };
 		FBB94F4F2662434400608D73 /* SearchEndpointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEndpointItem.swift; sourceTree = "<group>"; };
 		FBB94F5426624E5D00608D73 /* SearchSuggestionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSuggestionResponse.swift; sourceTree = "<group>"; };
+		FBB94F592662601300608D73 /* Throttle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Throttle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				FBB94F0926622CAD00608D73 /* SearchSuggestionViewController.swift */,
+				FBB94F592662601300608D73 /* Throttle.swift */,
 				FBB94F122662300900608D73 /* SearchSuggestionPresenter.swift */,
 				FBB94F172662301200608D73 /* SearchSuggestionRouter.swift */,
 				FBB94F1C2662301B00608D73 /* SearchSuggestionInteractor.swift */,
@@ -544,6 +547,7 @@
 				9B40C6BC26590CDE00404678 /* LoadingShowable.swift in Sources */,
 				DC55B60A2658EC0B00C5D2FD /* AppDelegate.swift in Sources */,
 				DC55B63F2658F5A800C5D2FD /* Widget.swift in Sources */,
+				FBB94F5A2662601300608D73 /* Throttle.swift in Sources */,
 				9B40C6BB26590CDE00404678 /* NibView.swift in Sources */,
 				9B40C6A0265904FA00404678 /* RestaurantCollectionViewCell.swift in Sources */,
 				3B5D42F9265A7421005D7A07 /* HomeRouter.swift in Sources */,

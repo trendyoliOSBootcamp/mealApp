@@ -10,11 +10,11 @@ import Foundation
 protocol SearchSuggestionPresenterInterface {
     func viewDidLoad()
     func numberOfItems(at section: Int) -> Int
-    func sizeOfItem(at indexPath: IndexPath) -> (Double, Double)
+    func sizeOfItem(at indexPath: IndexPath) -> (width: Double, height: Double)
     func updateSearchResults(searchText: String?)
     
     var numberOfSections: Int { get }
-    var headerSize: (Double, Double) { get }
+    var headerSize: (width: Double, height: Double) { get }
     
     func item(at indexPath: IndexPath) -> SearchItem?
     func suggestion(at section: Int) -> Suggestion?
@@ -26,26 +26,31 @@ protocol SearchSuggestionDelegate: AnyObject {
     func searchSuggestionItemTapped(item: SearchItem)
 }
 
-class SearchSuggestionPresenter {
+final class SearchSuggestionPresenter {
     weak var view: SearchSuggestionViewInterface?
     let router: SearchSuggestionRouterInterface
     let interactor: SearchSuggestionInteractorInterface
     private weak var delegate: SearchSuggestionDelegate?
+    private let throttler: ThrottlerInterface
     
     var suggestions: [Suggestion]?
     
-    init(view: SearchSuggestionViewInterface?, router: SearchSuggestionRouterInterface, interactor: SearchSuggestionInteractorInterface, delegate: SearchSuggestionDelegate?) {
+    init(view: SearchSuggestionViewInterface?,
+         router: SearchSuggestionRouterInterface,
+         interactor: SearchSuggestionInteractorInterface,
+         delegate: SearchSuggestionDelegate?,
+         throttler: ThrottlerInterface = Throttler(minimumDelay: 0.5)) {
         self.view = view
         self.router = router
         self.interactor = interactor
         self.delegate = delegate
+        self.throttler = throttler
     }
 }
 
 extension SearchSuggestionPresenter: SearchSuggestionPresenterInterface {
     func viewDidLoad() {
         view?.prepareCollectionView()
-        interactor.fetchSuggestions(keyword: "pi")
     }
     
     func numberOfItems(at section: Int) -> Int {
@@ -57,7 +62,7 @@ extension SearchSuggestionPresenter: SearchSuggestionPresenterInterface {
         suggestions?.count ?? 0
     }
     
-    func sizeOfItem(at indexPath: IndexPath) -> (Double, Double) {
+    func sizeOfItem(at indexPath: IndexPath) -> (width: Double, height: Double) {
         if indexPath.section == 0 {
             return (view?.collectionViewWidth ?? .zero, 80.0)
         } else {
@@ -65,13 +70,16 @@ extension SearchSuggestionPresenter: SearchSuggestionPresenterInterface {
         }
     }
     
-    var headerSize: (Double, Double) {
+    var headerSize: (width: Double, height: Double) {
         return (view?.collectionViewWidth ?? .zero, 44.0)
     }
     
     func updateSearchResults(searchText: String?) {
         guard let searchText = searchText, !searchText.isEmpty else { return }
-        interactor.fetchSuggestions(keyword: searchText)
+        throttler.throttle { [weak self] in
+            print(searchText)
+            self?.interactor.fetchSuggestions(keyword: searchText)
+        }
     }
     
     func item(at indexPath: IndexPath) -> SearchItem? {

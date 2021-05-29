@@ -11,7 +11,7 @@ protocol SearchSuggestionRouterInterface {
     
 }
 
-class SearchSuggestionRouter {
+final class SearchSuggestionRouter {
     static func createModule(delegate: SearchSuggestionDelegate?) -> SearchSuggestionViewController {
         let viewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SearchSuggestionViewController") as! SearchSuggestionViewController
         let router = SearchSuggestionRouter()

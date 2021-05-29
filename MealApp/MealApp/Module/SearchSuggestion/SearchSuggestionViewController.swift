@@ -71,11 +71,11 @@ extension SearchSuggestionViewController: UICollectionViewDataSource {
 extension SearchSuggestionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let size = presenter.sizeOfItem(at: indexPath)
-        return CGSize(width: size.0, height: size.1)
+        return CGSize(width: size.width, height: size.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: presenter.headerSize.0, height: presenter.headerSize.1)
+        return CGSize(width: presenter.headerSize.width, height: presenter.headerSize.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
