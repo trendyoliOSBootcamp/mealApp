@@ -40,6 +40,10 @@
 		DC55B63B2658ED9700C5D2FD /* CoreApi in Frameworks */ = {isa = PBXBuildFile; productRef = DC55B63A2658ED9700C5D2FD /* CoreApi */; };
 		DC55B63D2658F21100C5D2FD /* HomeEndpointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55B63C2658F21100C5D2FD /* HomeEndpointItem.swift */; };
 		DC55B63F2658F5A800C5D2FD /* Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55B63E2658F5A800C5D2FD /* Widget.swift */; };
+		DCA5DEDD2663727300D67EE2 /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA5DEDC2663727300D67EE2 /* HomePresenterTests.swift */; };
+		DCA5DEDF2663732F00D67EE2 /* MockHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA5DEDE2663732F00D67EE2 /* MockHomeViewController.swift */; };
+		DCA5DEE12663753000D67EE2 /* MockHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA5DEE02663753000D67EE2 /* MockHomeInteractor.swift */; };
+		DCA5DEE326637A3400D67EE2 /* HomeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = DCA5DEE226637A3400D67EE2 /* HomeResponse.json */; };
 		FBB94F0A26622CAD00608D73 /* SearchSuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB94F0926622CAD00608D73 /* SearchSuggestionViewController.swift */; };
 		FBB94F132662300900608D73 /* SearchSuggestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB94F122662300900608D73 /* SearchSuggestionPresenter.swift */; };
 		FBB94F182662301200608D73 /* SearchSuggestionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB94F172662301200608D73 /* SearchSuggestionRouter.swift */; };
@@ -112,6 +116,10 @@
 		DC55B62D2658EC0D00C5D2FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC55B63C2658F21100C5D2FD /* HomeEndpointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEndpointItem.swift; sourceTree = "<group>"; };
 		DC55B63E2658F5A800C5D2FD /* Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widget.swift; sourceTree = "<group>"; };
+		DCA5DEDC2663727300D67EE2 /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
+		DCA5DEDE2663732F00D67EE2 /* MockHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeViewController.swift; sourceTree = "<group>"; };
+		DCA5DEE02663753000D67EE2 /* MockHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeInteractor.swift; sourceTree = "<group>"; };
+		DCA5DEE226637A3400D67EE2 /* HomeResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HomeResponse.json; sourceTree = "<group>"; };
 		FBB94F0926622CAD00608D73 /* SearchSuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSuggestionViewController.swift; sourceTree = "<group>"; };
 		FBB94F122662300900608D73 /* SearchSuggestionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSuggestionPresenter.swift; sourceTree = "<group>"; };
 		FBB94F172662301200608D73 /* SearchSuggestionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSuggestionRouter.swift; sourceTree = "<group>"; };
@@ -181,7 +189,6 @@
 			children = (
 				DC55B60F2658EC0B00C5D2FD /* Main.storyboard */,
 				3B5D42E9265A73AB005D7A07 /* Home */,
-				3B5D430B265A92BE005D7A07 /* ProductDetail */,
 				FBB94F0E26622CB300608D73 /* SearchSuggestion */,
 				FBB94F5E266261BF00608D73 /* SearchPresentable.swift */,
 			);
@@ -208,13 +215,6 @@
 				DC55B63E2658F5A800C5D2FD /* Widget.swift */,
 			);
 			path = Entity;
-			sourceTree = "<group>";
-		};
-		3B5D430B265A92BE005D7A07 /* ProductDetail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ProductDetail;
 			sourceTree = "<group>";
 		};
 		9B40C69C265904FA00404678 /* RestaurantCollectionViewCell */ = {
@@ -327,6 +327,10 @@
 			children = (
 				DC55B6202658EC0D00C5D2FD /* MealAppTests.swift */,
 				DC55B6222658EC0D00C5D2FD /* Info.plist */,
+				DCA5DEDC2663727300D67EE2 /* HomePresenterTests.swift */,
+				DCA5DEE02663753000D67EE2 /* MockHomeInteractor.swift */,
+				DCA5DEDE2663732F00D67EE2 /* MockHomeViewController.swift */,
+				DCA5DEE226637A3400D67EE2 /* HomeResponse.json */,
 			);
 			path = MealAppTests;
 			sourceTree = "<group>";
@@ -536,6 +540,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCA5DEE326637A3400D67EE2 /* HomeResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,7 +596,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCA5DEDF2663732F00D67EE2 /* MockHomeViewController.swift in Sources */,
+				DCA5DEE12663753000D67EE2 /* MockHomeInteractor.swift in Sources */,
 				DC55B6212658EC0D00C5D2FD /* MealAppTests.swift in Sources */,
+				DCA5DEDD2663727300D67EE2 /* HomePresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,358 @@
+{
+  "widgets": [
+    {
+      "id": 5317,
+      "title": "Restoranlar (146)",
+      "type": "RESTAURANT",
+      "displayType": "SINGLE",
+      "restaurants": [
+        {
+          "id": 5317,
+          "imageUrl": "https://cdn.dsmcdn.com/ty51/1616136573863_5317_banner.png",
+          "logoUrl": "https://cdn.dsmcdn.com/ty48/1616136600354_5317_logo.png",
+          "deeplink": "",
+          "name": "Burger King (Atatürk Mah)",
+          "averageDeliveryInterval": "30-45dk",
+          "minBasketPrice": 20,
+          "kitchen": "Burger",
+          "rating": 4.2,
+          "ratingText": "(750+)",
+          "campaignText": "3lü Whopper Fırsatı",
+          "ratingBackgroundColor": "22c800",
+          "deliveryTypeImage": "https://cdn.dsmcdn.com/Assets/t/y/creative/mobile/InstantDelivery/go.png",
+          "workingHours": "11:00-23:30",
+          "workingHoursInterval": [
+            "11:00-23:30"
+          ],
+          "location": {
+            "neighborhoodName": "Atatürk Mah"
+          },
+          "closed": false
+        }
+      ]
+    },
+    {
+      "id": 6637,
+      "type": "RESTAURANT",
+      "displayType": "SINGLE",
+      "restaurants": [
+        {
+          "id": 6637,
+          "imageUrl": "https://cdn.dsmcdn.com/orangeprod8/gCZQcHOaEkqyeAgv.jpeg",
+          "logoUrl": "https://cdn.dsmcdn.com/ty100/1617955420546_6637_logo.jpg",
+          "deeplink": "",
+          "name": "McDonalds (Bulgurlu Mah)",
+          "averageDeliveryInterval": "25-40dk",
+          "minBasketPrice": 20,
+          "kitchen": "Burger",
+          "rating": 3.9,
+          "ratingText": "(800+)",
+          "campaignText": "Efsane İkili Menü",
+          "ratingBackgroundColor": "83d817",
+          "isClosed": false,
+          "deliveryTypeImage": "https://cdn.dsmcdn.com/Assets/t/y/creative/mobile/InstantDelivery/go.png",
+          "workingHours": "11:00-23:30",
+          "workingHoursInterval": [
+            "11:00-23:30"
+          ],
+          "location": {
+            "neighborhoodName": "Bulgurlu Mah"
+          },
+          "closed": false
+        }
+      ],
+      "displayCount": 1,
+      "displayOptions": {
+        "paddingTopBottom": 0,
+        "paddingRightLeft": 0
+      }
+    },
+    {
+      "id": 4041,
+      "type": "RESTAURANT",
+      "displayType": "SINGLE",
+      "restaurants": [
+        {
+          "id": 4041,
+          "imageUrl": "https://cdn.dsmcdn.com/ty113/1620213387493_4041_banner.jpg",
+          "logoUrl": "https://cdn.dsmcdn.com/ty113/1620213397514_4041_logo.jpg",
+          "deeplink": "",
+          "name": "Baklavacı Anteplioğlu (Yavuztürk Mah)",
+          "averageDeliveryInterval": "25-40dk",
+          "minBasketPrice": 20,
+          "kitchen": "Tatlı,Ramazan İndirimleri",
+          "rating": 4.5,
+          "ratingText": "(850+)",
+          "campaignText": "%10 + Bayram Tatlısı Sepette %20 İndirimli",
+          "ratingBackgroundColor": "22c800",
+          "isClosed": false,
+          "deliveryTypeImage": "https://cdn.dsmcdn.com/Assets/t/y/creative/mobile/InstantDelivery/go.png",
+          "workingHours": "11:00-23:30",
+          "workingHoursInterval": [
+            "11:00-23:30"
+          ],
+          "location": {
+            "neighborhoodName": "Yavuztürk Mah"
+          },
+          "closed": false
+        }
+      ],
+      "displayCount": 1,
+      "displayOptions": {
+        "paddingTopBottom": 0,
+        "paddingRightLeft": 0
+      }
+    },
+    {
+      "id": 7459,
+      "type": "RESTAURANT",
+      "displayType": "SINGLE",
+      "restaurants": [
+        {
+          "id": 7459,
+          "imageUrl": "https://cdn.dsmcdn.com/ty106/1619451278826_7459_banner.jpg",
+          "logoUrl": "https://cdn.dsmcdn.com/ty106/1619451344952_7459_logo.jpg",
+          "deeplink": "",
+          "name": "KFC (Bulgurlu Mah)",
+          "averageDeliveryInterval": "25-40dk",
+          "minBasketPrice": 20,
+          "kitchen": "Tavuk",
+          "rating": 4.5,
+          "ratingText": "(300+)",
+          "campaignText": "2 KFC Tavuk Burger Menü",
+          "ratingBackgroundColor": "22c800",
+          "isClosed": false,
+          "deliveryTypeImage": "https://cdn.dsmcdn.com/Assets/t/y/creative/mobile/InstantDelivery/go.png",
+          "workingHours": "11:00-23:30",
+          "workingHoursInterval": [
+            "11:00-23:30"
+          ],
+          "location": {
+            "neighborhoodName": "Bulgurlu Mah"
+          },
+          "closed": false
+        }
+      ],
+      "displayCount": 1,
+      "displayOptions": {
+        "paddingTopBottom": 0,
+        "paddingRightLeft": 0
+      }
+    },
+    {
+      "id": 2265,
+      "type": "RESTAURANT",
+      "displayType": "SINGLE",
+      "restaurants": [
+        {
+          "id": 2265,
+          "imageUrl": "https://cdn.dsmcdn.com/orangeprod8/AnXIXNSaNNwyOVWM.jpeg",
+          "logoUrl": "https://cdn.dsmcdn.com/ty54/1610552952432_2265_logo.jpg",
+          "deeplink": "",
+          "name": "Pizza Lazza (Güzeltepe Mah)",
+          "averageDeliveryInterval": "25-40dk",
+          "minBasketPrice": 20,
+          "kitchen": "Pizza,Ramazan İndirimleri",
+          "rating": 4.4,
+          "ratingText": "(1000+)",
+          "campaignText": "Sevilen 2li Menü Fırsatı",
+          "ratingBackgroundColor": "22c800",
+          "isClosed": false,
+          "deliveryTypeImage": "https://cdn.dsmcdn.com/Assets/t/y/creative/mobile/InstantDelivery/go.png",
+          "workingHours": "11:00-23:30",
+          "workingHoursInterval": [
+            "11:00-23:30"
+          ],
+          "location": {
+            "neighborhoodName": "Güzeltepe Mah"
+          },
+          "closed": false
+        }
+      ],
+      "displayCount": 1,
+      "displayOptions": {
+        "paddingTopBottom": 0,
+        "paddingRightLeft": 0
+      }
+    },
+    {
+      "id": 6139,
+      "type": "RESTAURANT",
+      "displayType": "SINGLE",
+      "restaurants": [
+        {
+          "id": 6139,
+          "imageUrl": "https://cdn.dsmcdn.com/ty103/1618469164653_6139_banner.jpg",
+          "logoUrl": "https://cdn.dsmcdn.com/ty103/1618469175442_6139_logo.jpg",
+          "deeplink": "",
+          "name": "İnci Profiterol & Ekler (Atatürk Mah)",
+          "averageDeliveryInterval": "30-45dk",
+          "minBasketPrice": 20,
+          "kitchen": "Tatlı,Ramazan İndirimleri",
+          "rating": 4.6,
+          "ratingText": "(200+)",
+          "campaignText": "Bayram Tatlısı Sepette %20 İndirimli",
+          "ratingBackgroundColor": "22c800",
+          "isClosed": false,
+          "deliveryTypeImage": "https://cdn.dsmcdn.com/Assets/t/y/creative/mobile/InstantDelivery/go.png",
+          "workingHours": "11:00-23:30",
+          "workingHoursInterval": [
+            "11:00-23:30"
+          ],
+          "location": {
+            "neighborhoodName": "Atatürk Mah"
+          },
+          "closed": false
+        }
+      ],
+      "displayCount": 1,
+      "displayOptions": {
+        "paddingTopBottom": 0,
+        "paddingRightLeft": 0
+      }
+    },
+    {
+      "id": 4641,
+      "type": "RESTAURANT",
+      "displayType": "SINGLE",
+      "restaurants": [
+        {
+          "id": 4641,
+          "imageUrl": "https://cdn.dsmcdn.com/ty107/1618833168328_4641_banner.jpg",
+          "logoUrl": "https://cdn.dsmcdn.com/ty78/1614871143491_4641_logo.jpg",
+          "deeplink": "",
+          "name": "Meşhur Hat Döner (Yamanevler Mah)",
+          "averageDeliveryInterval": "25-40dk",
+          "minBasketPrice": 20,
+          "kitchen": "Döner,Ramazan İndirimleri",
+          "rating": 4,
+          "ratingText": "(350+)",
+          "campaignText": "%10 + Sepette %10 İndirim",
+          "ratingBackgroundColor": "22c800",
+          "isClosed": false,
+          "deliveryTypeImage": "https://cdn.dsmcdn.com/Assets/t/y/creative/mobile/InstantDelivery/go.png",
+          "workingHours": "11:00-23:30",
+          "workingHoursInterval": [
+            "11:00-23:30"
+          ],
+          "location": {
+            "neighborhoodName": "Yamanevler Mah"
+          },
+          "closed": false
+        }
+      ],
+      "displayCount": 1,
+      "displayOptions": {
+        "paddingTopBottom": 0,
+        "paddingRightLeft": 0
+      }
+    },
+    {
+      "id": 3098,
+      "type": "RESTAURANT",
+      "displayType": "SINGLE",
+      "restaurants": [
+        {
+          "id": 3098,
+          "imageUrl": "https://cdn.dsmcdn.com/ty62/1612275945905_3098_banner.jpg",
+          "logoUrl": "https://cdn.dsmcdn.com/ty62/1612275959334_3098_logo.jpg",
+          "deeplink": "",
+          "name": "Burger Daddy (Elmalıkent Mah)",
+          "averageDeliveryInterval": "25-40dk",
+          "minBasketPrice": 20,
+          "kitchen": "Burger",
+          "rating": 4.5,
+          "ratingText": "(450+)",
+          "ratingBackgroundColor": "22c800",
+          "isClosed": false,
+          "deliveryTypeImage": "https://cdn.dsmcdn.com/Assets/t/y/creative/mobile/InstantDelivery/go.png",
+          "workingHours": "10:00-23:30",
+          "workingHoursInterval": [
+            "10:00-23:30"
+          ],
+          "location": {
+            "neighborhoodName": "Elmalıkent Mah"
+          },
+          "closed": false
+        }
+      ],
+      "displayCount": 1,
+      "displayOptions": {
+        "paddingTopBottom": 0,
+        "paddingRightLeft": 0
+      }
+    },
+    {
+      "id": 3512,
+      "type": "RESTAURANT",
+      "displayType": "SINGLE",
+      "restaurants": [
+        {
+          "id": 3512,
+          "imageUrl": "https://cdn.dsmcdn.com/orangeprod8/exgigraNWgvaQvGZ.jpeg",
+          "logoUrl": "https://cdn.dsmcdn.com/ty69/1612954786404_3512_logo.jpg",
+          "deeplink": "",
+          "name": "Faruk Güllüoğlu (Güzeltepe Mah)",
+          "averageDeliveryInterval": "25-40dk",
+          "minBasketPrice": 20,
+          "kitchen": "Tatlı",
+          "rating": 4.5,
+          "ratingText": "(350+)",
+          "campaignText": "Bayram Tatlısı Sepette %20 İndirimli",
+          "ratingBackgroundColor": "22c800",
+          "isClosed": false,
+          "deliveryTypeImage": "https://cdn.dsmcdn.com/Assets/t/y/creative/mobile/InstantDelivery/go.png",
+          "workingHours": "10:00-23:30",
+          "workingHoursInterval": [
+            "10:00-23:30"
+          ],
+          "location": {
+            "neighborhoodName": "Güzeltepe Mah"
+          },
+          "closed": true
+        }
+      ],
+      "displayCount": 1,
+      "displayOptions": {
+        "paddingTopBottom": 0,
+        "paddingRightLeft": 0
+      }
+    },
+    {
+      "id": 2213,
+      "type": "RESTAURANT",
+      "displayType": "SINGLE",
+      "restaurants": [
+        {
+          "id": 2213,
+          "imageUrl": "https://cdn.dsmcdn.com/orangeprod8/ACgPqsAZedFXecrr.jpeg",
+          "logoUrl": "https://cdn.dsmcdn.com/ty55/1610549917337_2213_logo.jpg",
+          "deeplink": "",
+          "name": "Arsamiea Çiğköfte (Küçük Çamlıca Mah)",
+          "averageDeliveryInterval": "25-40dk",
+          "minBasketPrice": 20,
+          "kitchen": "Sokak Lezzetleri",
+          "rating": 4.7,
+          "ratingText": "(700+)",
+          "ratingBackgroundColor": "22c800",
+          "isClosed": false,
+          "deliveryTypeImage": "https://cdn.dsmcdn.com/Assets/t/y/creative/mobile/InstantDelivery/go.png",
+          "workingHours": "12:00-23:30",
+          "workingHoursInterval": [
+            "12:00-23:30"
+          ],
+          "location": {
+            "neighborhoodName": "Küçük Çamlıca Mah"
+          },
+          "closed": false
+        }
+      ],
+      "displayCount": 1,
+      "displayOptions": {
+        "paddingTopBottom": 0,
+        "paddingRightLeft": 0
+      }
+    }
+  ],
+  "href": "page=2"
+}
