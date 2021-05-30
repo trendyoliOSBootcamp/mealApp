@@ -52,7 +52,8 @@ final class RestaurantCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var statusView: StampView!
     @IBOutlet private weak var statusImageView: UIImageView!
     @IBOutlet private weak var descriptionLabel: UILabel!
-
+    @IBOutlet private weak var favoriteButton: UIButton!
+    
     var presenter: RestaurantCollectionCellPresenterInterface! {
         didSet {
             presenter.load()
