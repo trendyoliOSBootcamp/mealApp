@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B09C9EC266385C900D92097 /* MockRestaurantCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B09C9EB266385C900D92097 /* MockRestaurantCollectionViewCell.swift */; };
+		3B09C9EE2663867F00D92097 /* MockRestaurantCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B09C9ED2663867F00D92097 /* MockRestaurantCollectionDelegate.swift */; };
+		3B09C9F0266386F700D92097 /* RestaurantCollectionCellPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B09C9EF266386F700D92097 /* RestaurantCollectionCellPresenterTests.swift */; };
 		3B5D42EC265A73E7005D7A07 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D42EB265A73E7005D7A07 /* HomePresenter.swift */; };
 		3B5D42F4265A7403005D7A07 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D42F3265A7403005D7A07 /* HomeInteractor.swift */; };
 		3B5D42F9265A7421005D7A07 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D42F8265A7421005D7A07 /* HomeRouter.swift */; };
@@ -79,6 +82,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B09C9EB266385C900D92097 /* MockRestaurantCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRestaurantCollectionViewCell.swift; sourceTree = "<group>"; };
+		3B09C9ED2663867F00D92097 /* MockRestaurantCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRestaurantCollectionDelegate.swift; sourceTree = "<group>"; };
+		3B09C9EF266386F700D92097 /* RestaurantCollectionCellPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCollectionCellPresenterTests.swift; sourceTree = "<group>"; };
 		3B5D42EB265A73E7005D7A07 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		3B5D42F3265A7403005D7A07 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		3B5D42F8265A7421005D7A07 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
@@ -164,6 +170,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B09C9E92663855C00D92097 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3B09C9EA2663857000D92097 /* RestaurantCollectionViewCell */,
+				DCA5DEDC2663727300D67EE2 /* HomePresenterTests.swift */,
+				DCA5DEE02663753000D67EE2 /* MockHomeInteractor.swift */,
+				DCA5DEDE2663732F00D67EE2 /* MockHomeViewController.swift */,
+				DCA5DEE226637A3400D67EE2 /* HomeResponse.json */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3B09C9EA2663857000D92097 /* RestaurantCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3B09C9EB266385C900D92097 /* MockRestaurantCollectionViewCell.swift */,
+				3B09C9ED2663867F00D92097 /* MockRestaurantCollectionDelegate.swift */,
+				3B09C9EF266386F700D92097 /* RestaurantCollectionCellPresenterTests.swift */,
+			);
+			path = RestaurantCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		3B5D42E6265A735C005D7A07 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,12 +353,9 @@
 		DC55B61F2658EC0D00C5D2FD /* MealAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				3B09C9E92663855C00D92097 /* Home */,
 				DC55B6202658EC0D00C5D2FD /* MealAppTests.swift */,
 				DC55B6222658EC0D00C5D2FD /* Info.plist */,
-				DCA5DEDC2663727300D67EE2 /* HomePresenterTests.swift */,
-				DCA5DEE02663753000D67EE2 /* MockHomeInteractor.swift */,
-				DCA5DEDE2663732F00D67EE2 /* MockHomeViewController.swift */,
-				DCA5DEE226637A3400D67EE2 /* HomeResponse.json */,
 			);
 			path = MealAppTests;
 			sourceTree = "<group>";
@@ -598,6 +623,9 @@
 			files = (
 				DCA5DEDF2663732F00D67EE2 /* MockHomeViewController.swift in Sources */,
 				DCA5DEE12663753000D67EE2 /* MockHomeInteractor.swift in Sources */,
+				3B09C9EC266385C900D92097 /* MockRestaurantCollectionViewCell.swift in Sources */,
+				3B09C9EE2663867F00D92097 /* MockRestaurantCollectionDelegate.swift in Sources */,
+				3B09C9F0266386F700D92097 /* RestaurantCollectionCellPresenterTests.swift in Sources */,
 				DC55B6212658EC0D00C5D2FD /* MealAppTests.swift in Sources */,
 				DCA5DEDD2663727300D67EE2 /* HomePresenterTests.swift in Sources */,
 			);

@@ -20,23 +20,6 @@ class HomePresenterTests: XCTestCase {
         presenter = .init(view: view, interactor: interactor)
     }
 
-
-    //    func test_viewDidLoad_InvokesRequiredViewMethods() {
-    //        XCTAssertFalse(view.isShowLoadingViewInvoked)
-    //        XCTAssertFalse(interactor.isFetchWidgetsInvoked)
-    //        XCTAssertNil(interactor.fetchWidgetsInvokedWithQuery)
-    ////         GIVEN
-    //
-    //        presenter.viewDidLoad()
-    ////        WHEN
-    //
-    //        XCTAssertTrue(view.isShowLoadingViewInvoked)
-    //        XCTAssertTrue(interactor.isFetchWidgetsInvoked)
-    //        XCTAssertEqual(interactor.fetchWidgetsInvokedWithQuery, "page=1")
-    ////        Then
-    //
-    //    }
-
     func test_viewDidLoad_InvokesRequiredViewMethods() {
         XCTAssertFalse(view.invokedPrepareNavigationBarUI)
         XCTAssertFalse(view.invokedSetTitle)
@@ -79,6 +62,7 @@ class HomePresenterTests: XCTestCase {
         XCTAssertFalse(view.invokedShowLoadingView)
         XCTAssertFalse(interactor.invokedFetchWidgets)
         XCTAssertNil(interactor.invokedFetchWidgetsParameters)
+
         presenter.willDisplay(9)
 
         XCTAssertTrue(view.invokedShowLoadingView)
@@ -109,5 +93,9 @@ extension HomeResponse {
         let data = file.data(using: .utf8)!
         let homeResponse = try! JSONDecoder().decode(HomeResponse.self, from: data)
         return homeResponse
+    }
+
+    static var emptyResponse: HomeResponse? {
+        nil
     }
 }
