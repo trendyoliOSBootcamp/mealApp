@@ -9,6 +9,8 @@ import Foundation
 @testable import MealApp
 
 final class MockRestaurantCollectionViewCell: RestaurantCollectionViewCellInterface {
+    func setAccessibilityIdentifiers() { }
+    
     var invokedPrepareShadow = false
     var invokedPrepareShadowCount = 0
 

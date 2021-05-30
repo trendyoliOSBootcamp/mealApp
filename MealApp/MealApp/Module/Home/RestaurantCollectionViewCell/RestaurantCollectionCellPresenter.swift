@@ -82,5 +82,6 @@ extension RestaurantCollectionCellPresenter: RestaurantCollectionCellPresenterIn
         setStatusView()
         setRestaurantRating()
         setDescriptionView()
+        view?.setAccessibilityIdentifiers()
     }
 }

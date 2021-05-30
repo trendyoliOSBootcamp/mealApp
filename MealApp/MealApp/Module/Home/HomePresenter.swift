@@ -77,6 +77,7 @@ extension HomePresenter: HomePresenterInterface {
         view?.prepareCollectionView()
         view?.addRefreshControl()
         fetchWidgets(query: href)
+        view?.setAccessibilityIdentifiers()
     }
 
     func restaurant(_ index: Int) -> Restaurant? {

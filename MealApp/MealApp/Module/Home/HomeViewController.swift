@@ -8,7 +8,7 @@
 import UIKit
 
 // HomePresenter -> HomeViewInterface
-protocol HomeViewInterface: AnyObject, SearchPresentable {
+protocol HomeViewInterface: AccessibilityIdentifiable, SearchPresentable {
     func showLoadingView()
     func hideLoadingView()
     func reloadData()
@@ -60,6 +60,7 @@ extension HomeViewController: UICollectionViewDataSource {
             cell.presenter = RestaurantCollectionCellPresenter(view: cell,
                                                                restaurant: restaurant,
                                                                delegate: self)
+            setAccessibilityIdentifiers(view: cell, index: indexPath.item)
         }
         return cell
     }
@@ -136,5 +137,17 @@ extension HomeViewController:  SearchSuggestionDelegate {
     func searchSuggestionItemTapped(item: SearchItem) {
         print("searchSuggestionItemTapped: \(item.title)")
         searchController?.isActive = false
+    }
+}
+
+extension HomeViewController {
+    func setAccessibilityIdentifiers() {
+        restaurantsCollectionView.accessibilityIdentifier = "restaurantsCollectionView"
+        searchController?.searchBar.searchTextField.accessibilityIdentifier = "homePageSearchTextField"
+        navigationController?.navigationBar.accessibilityIdentifier = "homePageNavigationBar"
+    }
+    
+    func setAccessibilityIdentifiers(view: UIView, index: Int) {
+        view.accessibilityIdentifier = "productCell_\(index)"
     }
 }

@@ -9,6 +9,8 @@
 import UIKit
 
 final class MockHomeViewController: HomeViewInterface {
+    func setAccessibilityIdentifiers() { }
+    
     var invokedNavigationItemGetter = false
     var invokedNavigationItemGetterCount = 0
     var stubbedNavigationItem: UINavigationItem!

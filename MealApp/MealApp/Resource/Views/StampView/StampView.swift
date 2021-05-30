@@ -31,5 +31,17 @@ final class StampView: NibView {
             imageContainerView.isHidden = true
         }
     }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setAccessibilityIdentifiers()
+    }
+}
+
+extension StampView: AccessibilityIdentifiable {
+    func setAccessibilityIdentifiers() {
+        stampImageView.accessibilityIdentifier = "stampImageView"
+        stampLabel.accessibilityIdentifier = "stampLabel"
+    }
 }
 

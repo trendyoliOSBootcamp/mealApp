@@ -9,7 +9,7 @@ import UIKit
 import SDWebImage
 
 //presenter -> RestaurantCollectionViewCellInterface
-protocol RestaurantCollectionViewCellInterface: AnyObject {
+protocol RestaurantCollectionViewCellInterface: AccessibilityIdentifiable {
     func prepareShadow()
     func setTitleLabel(_ text: String)
     func prepareBannerImage(with url: URL)
@@ -145,5 +145,15 @@ extension RestaurantCollectionViewCell: RestaurantCollectionViewCellInterface {
         attributedString.append(NSMutableAttributedString(string: kitchen,
                                                           attributes: [NSAttributedString.Key.font : Constants.UI.fontRegular]))
         descriptionLabel.attributedText = attributedString
+    }
+}
+
+extension RestaurantCollectionViewCell {
+    func setAccessibilityIdentifiers() {
+        bannerImageView.accessibilityIdentifier = "bannerImageView"
+        titleLabel.accessibilityIdentifier = "titleLabel"
+        statusImageView.accessibilityIdentifier = "statusImageView"
+        descriptionLabel.accessibilityIdentifier = "descriptionLabel"
+        favoriteButton.accessibilityIdentifier = "favoriteButton"
     }
 }
