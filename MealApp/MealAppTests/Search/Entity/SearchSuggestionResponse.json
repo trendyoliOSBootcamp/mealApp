@@ -1,0 +1,184 @@
+{
+    "suggestions": [
+        {
+            "type": "RESTAURANT",
+            "title": "Restoranlar",
+            "items": [
+                {
+                    "restaurantId": 626,
+                    "deeplink": "",
+                    "title": "Bin Derece Pizza (Nisbetiye Mah)",
+                    "kitchen": "Pizza",
+                    "averageDeliveryInterval": "25-40dk",
+                    "minBasketPrice": 20,
+                    "rating": 4.4,
+                    "ratingBackgroundColor": "22c800",
+                    "imageUrl": "https://cdn.dsmcdn.com/ty20/instant-delivery/logo/1604074266783_626_logo.png",
+                    "deliveryTypeImage": "https://cdn.dsmcdn.com/Assets/t/y/creative/mobile/InstantDelivery/go.png",
+                    "location": {
+                        "neighborhoodName": "Nisbetiye Mah"
+                    }
+                },
+                {
+                    "restaurantId": 741,
+                    "deeplink": "",
+                    "title": "Pizza Mia Casa (Kültür Mah)",
+                    "kitchen": "Pizza",
+                    "averageDeliveryInterval": "30-45dk",
+                    "minBasketPrice": 20,
+                    "rating": 4.4,
+                    "ratingBackgroundColor": "22c800",
+                    "imageUrl": "https://cdn.dsmcdn.com/ty20/instant-delivery/logo/1604329843937_741_logo.png",
+                    "deliveryTypeImage": "https://cdn.dsmcdn.com/Assets/t/y/creative/mobile/InstantDelivery/go.png",
+                    "location": {
+                        "neighborhoodName": "Kültür Mah"
+                    }
+                },
+                {
+                    "restaurantId": 897,
+                    "deeplink": "",
+                    "title": "Pizza Getto (Emniyet Evleri Mah)",
+                    "kitchen": "Pizza",
+                    "averageDeliveryInterval": "25-40dk",
+                    "minBasketPrice": 20,
+                    "rating": 4.3,
+                    "ratingBackgroundColor": "22c800",
+                    "imageUrl": "https://cdn.dsmcdn.com/ty27/instant-delivery/logo/1606479993845_897_logo.png",
+                    "deliveryTypeImage": "https://cdn.dsmcdn.com/Assets/t/y/creative/mobile/InstantDelivery/go.png",
+                    "location": {
+                        "neighborhoodName": "Emniyet Evleri Mah"
+                    }
+                },
+                {
+                    "restaurantId": 5772,
+                    "deeplink": "",
+                    "title": "Sliceguy Pizza (Rumelihisarı Mah)",
+                    "kitchen": "Pizza",
+                    "averageDeliveryInterval": "35-50dk",
+                    "minBasketPrice": 20,
+                    "rating": 4.4,
+                    "ratingBackgroundColor": "22c800",
+                    "imageUrl": "https://cdn.dsmcdn.com/ty101/1617973373454_5772_logo.png",
+                    "deliveryTypeImage": "https://cdn.dsmcdn.com/Assets/t/y/creative/mobile/InstantDelivery/go.png",
+                    "location": {
+                        "neighborhoodName": "Rumelihisarı Mah"
+                    }
+                },
+                {
+                    "restaurantId": 5895,
+                    "deeplink": "",
+                    "title": "Pizza Maestro (Reşitpaşa Mah)",
+                    "kitchen": "Pizza",
+                    "averageDeliveryInterval": "25-40dk",
+                    "minBasketPrice": 20,
+                    "rating": 4.7,
+                    "ratingBackgroundColor": "22c800",
+                    "imageUrl": "https://cdn.dsmcdn.com/ty95/1617636115451_5895_logo.png",
+                    "deliveryTypeImage": "https://cdn.dsmcdn.com/Assets/t/y/creative/mobile/InstantDelivery/go.png",
+                    "location": {
+                        "neighborhoodName": "Reşitpaşa Mah"
+                    }
+                },
+                {
+                    "restaurantId": 1656,
+                    "deeplink": "",
+                    "title": "Pizza Station (Nisbetiye Mah)",
+                    "kitchen": "Pizza",
+                    "averageDeliveryInterval": "25-40dk",
+                    "minBasketPrice": 20,
+                    "rating": 3.9,
+                    "ratingBackgroundColor": "83d817",
+                    "imageUrl": "https://cdn.dsmcdn.com/ty59/1611667005911_1656_logo.png",
+                    "deliveryTypeImage": "https://cdn.dsmcdn.com/Assets/t/y/creative/mobile/InstantDelivery/go.png",
+                    "location": {
+                        "neighborhoodName": "Nisbetiye Mah"
+                    }
+                },
+                {
+                    "restaurantId": 4447,
+                    "deeplink": "",
+                    "title": "Papa Johns Pizza(Etiler Mah)",
+                    "kitchen": "Pizza",
+                    "averageDeliveryInterval": "25 - 40dk",
+                    "minBasketPrice": 20,
+                    "rating": 4.4,
+                    "ratingBackgroundColor": "22c800",
+                    "imageUrl": "https://cdn.dsmcdn.com/ty79/1614848940042_4447_logo.jpg",
+                    "deliveryTypeImage": "https://cdn.dsmcdn.com/Assets/t/y/creative/mobile/InstantDelivery/go.png",
+                    "location": {
+                        "neighborhoodName": "Etiler Mah"
+                    }
+                },
+                {
+                    "restaurantId": 8414,
+                    "deeplink": "",
+                    "title": "Little Caesars Pizza (Etiler Mah)",
+                    "kitchen": "Pizza",
+                    "averageDeliveryInterval": "20-30dk",
+                    "minBasketPrice": 24,
+                    "rating": 4.1,
+                    "ratingBackgroundColor": "22c800",
+                    "imageUrl": "https://cdn.dsmcdn.com/ty111/1620740877996_8414_logo.jpg",
+                    "deliveryTypeImage": "https://cdn.dsmcdn.com/Assets/t/y/creative/mobile/Meal/meal-scooter.png",
+                    "location": {
+                        "neighborhoodName": "Etiler Mah"
+                    }
+                },
+                {
+                    "restaurantId": 9347,
+                    "deeplink": "",
+                    "title": "Pizza V (Rumelihisarı Mah)",
+                    "kitchen": "Pizza",
+                    "averageDeliveryInterval": "25-40dk",
+                    "minBasketPrice": 20,
+                    "imageUrl": "https://cdn.dsmcdn.com/orangeprod10/lHVUAepntCCnAjHW.png",
+                    "deliveryTypeImage": "https://cdn.dsmcdn.com/Assets/t/y/creative/mobile/InstantDelivery/go.png",
+                    "location": {
+                        "neighborhoodName": "Rumelihisarı Mah"
+                    }
+                },
+                {
+                    "restaurantId": 525,
+                    "deeplink": "",
+                    "title": "Pizza Wood Fire (Akat Mah)",
+                    "kitchen": "Pizza",
+                    "averageDeliveryInterval": "25-40dk",
+                    "minBasketPrice": 20,
+                    "rating": 3.6,
+                    "ratingBackgroundColor": "83d817",
+                    "imageUrl": "https://cdn.dsmcdn.com/ty20/instant-delivery/logo/1604074130643_525_logo.png",
+                    "deliveryTypeImage": "https://cdn.dsmcdn.com/Assets/t/y/creative/mobile/InstantDelivery/go.png",
+                    "location": {
+                        "neighborhoodName": "Akat Mah"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "TEXT",
+            "title": "Yemekler",
+            "items": [
+                {
+                    "deeplink": "Hawaii Pizza (XLarge)",
+                    "title": "Hawaii Pizza (XLarge)"
+                },
+                {
+                    "deeplink": "Beş Peynirli Pizza (42 cm.)",
+                    "title": "Beş Peynirli Pizza (42 cm.)"
+                },
+                {
+                    "deeplink": "Âlâ - Pizza Tost",
+                    "title": "Âlâ - Pizza Tost"
+                },
+                {
+                    "deeplink": "Mini Karışık Pizza (500 gr.)",
+                    "title": "Mini Karışık Pizza (500 gr.)"
+                },
+                {
+                    "deeplink": "Şefin Pizzası Yarım (2 Dilim)",
+                    "title": "Şefin Pizzası Yarım (2 Dilim)"
+                }
+            ]
+        }
+    ]
+}

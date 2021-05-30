@@ -14,6 +14,13 @@
 		3B5D42F4265A7403005D7A07 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D42F3265A7403005D7A07 /* HomeInteractor.swift */; };
 		3B5D42F9265A7421005D7A07 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D42F8265A7421005D7A07 /* HomeRouter.swift */; };
 		3B5D4304265A8EAE005D7A07 /* RestaurantCollectionCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D4303265A8EAE005D7A07 /* RestaurantCollectionCellPresenter.swift */; };
+		55D0FA2A2663996A009ECFD7 /* MockThrottler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D0FA292663996A009ECFD7 /* MockThrottler.swift */; };
+		55D0FA3226639A81009ECFD7 /* MockSearchSuggestionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D0FA3126639A81009ECFD7 /* MockSearchSuggestionRouter.swift */; };
+		55D0FA3726639ABD009ECFD7 /* MockSearchSuggestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D0FA3626639ABD009ECFD7 /* MockSearchSuggestionView.swift */; };
+		55D0FA3C26639AE6009ECFD7 /* MockSearchSuggestionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D0FA3B26639AE6009ECFD7 /* MockSearchSuggestionInteractor.swift */; };
+		55D0FA4126639B17009ECFD7 /* MockSearchSuggestionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D0FA4026639B17009ECFD7 /* MockSearchSuggestionDelegate.swift */; };
+		55D0FA4626639B43009ECFD7 /* SearchSuggestionPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D0FA4526639B43009ECFD7 /* SearchSuggestionPresenterTests.swift */; };
+		55D0FA4C26639D95009ECFD7 /* SearchSuggestionResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 55D0FA4B26639D95009ECFD7 /* SearchSuggestionResponse.json */; };
 		9B40C69F265904FA00404678 /* RestaurantCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B40C69D265904FA00404678 /* RestaurantCollectionViewCell.xib */; };
 		9B40C6A0265904FA00404678 /* RestaurantCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B40C69E265904FA00404678 /* RestaurantCollectionViewCell.swift */; };
 		9B40C6B226590CDE00404678 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B40C6A526590CDE00404678 /* UIFont+Extension.swift */; };
@@ -89,6 +96,13 @@
 		3B5D42F3265A7403005D7A07 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		3B5D42F8265A7421005D7A07 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		3B5D4303265A8EAE005D7A07 /* RestaurantCollectionCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCollectionCellPresenter.swift; sourceTree = "<group>"; };
+		55D0FA292663996A009ECFD7 /* MockThrottler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockThrottler.swift; sourceTree = "<group>"; };
+		55D0FA3126639A81009ECFD7 /* MockSearchSuggestionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchSuggestionRouter.swift; sourceTree = "<group>"; };
+		55D0FA3626639ABD009ECFD7 /* MockSearchSuggestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchSuggestionView.swift; sourceTree = "<group>"; };
+		55D0FA3B26639AE6009ECFD7 /* MockSearchSuggestionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchSuggestionInteractor.swift; sourceTree = "<group>"; };
+		55D0FA4026639B17009ECFD7 /* MockSearchSuggestionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchSuggestionDelegate.swift; sourceTree = "<group>"; };
+		55D0FA4526639B43009ECFD7 /* SearchSuggestionPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSuggestionPresenterTests.swift; sourceTree = "<group>"; };
+		55D0FA4B26639D95009ECFD7 /* SearchSuggestionResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SearchSuggestionResponse.json; sourceTree = "<group>"; };
 		9B40C69D265904FA00404678 /* RestaurantCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestaurantCollectionViewCell.xib; sourceTree = "<group>"; };
 		9B40C69E265904FA00404678 /* RestaurantCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantCollectionViewCell.swift; sourceTree = "<group>"; };
 		9B40C6A526590CDE00404678 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
@@ -245,6 +259,28 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		55D0FA2826639937009ECFD7 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				55D0FA4A26639D82009ECFD7 /* Entity */,
+				55D0FA292663996A009ECFD7 /* MockThrottler.swift */,
+				55D0FA3126639A81009ECFD7 /* MockSearchSuggestionRouter.swift */,
+				55D0FA3626639ABD009ECFD7 /* MockSearchSuggestionView.swift */,
+				55D0FA3B26639AE6009ECFD7 /* MockSearchSuggestionInteractor.swift */,
+				55D0FA4026639B17009ECFD7 /* MockSearchSuggestionDelegate.swift */,
+				55D0FA4526639B43009ECFD7 /* SearchSuggestionPresenterTests.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		55D0FA4A26639D82009ECFD7 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				55D0FA4B26639D95009ECFD7 /* SearchSuggestionResponse.json */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		9B40C69C265904FA00404678 /* RestaurantCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,6 +389,7 @@
 		DC55B61F2658EC0D00C5D2FD /* MealAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				55D0FA2826639937009ECFD7 /* Search */,
 				3B09C9E92663855C00D92097 /* Home */,
 				DC55B6202658EC0D00C5D2FD /* MealAppTests.swift */,
 				DC55B6222658EC0D00C5D2FD /* Info.plist */,
@@ -565,6 +602,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55D0FA4C26639D95009ECFD7 /* SearchSuggestionResponse.json in Resources */,
 				DCA5DEE326637A3400D67EE2 /* HomeResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -621,10 +659,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55D0FA2A2663996A009ECFD7 /* MockThrottler.swift in Sources */,
+				55D0FA3C26639AE6009ECFD7 /* MockSearchSuggestionInteractor.swift in Sources */,
 				DCA5DEDF2663732F00D67EE2 /* MockHomeViewController.swift in Sources */,
+				55D0FA3726639ABD009ECFD7 /* MockSearchSuggestionView.swift in Sources */,
 				DCA5DEE12663753000D67EE2 /* MockHomeInteractor.swift in Sources */,
+				55D0FA3226639A81009ECFD7 /* MockSearchSuggestionRouter.swift in Sources */,
 				3B09C9EC266385C900D92097 /* MockRestaurantCollectionViewCell.swift in Sources */,
 				3B09C9EE2663867F00D92097 /* MockRestaurantCollectionDelegate.swift in Sources */,
+				55D0FA4126639B17009ECFD7 /* MockSearchSuggestionDelegate.swift in Sources */,
+				55D0FA4626639B43009ECFD7 /* SearchSuggestionPresenterTests.swift in Sources */,
 				3B09C9F0266386F700D92097 /* RestaurantCollectionCellPresenterTests.swift in Sources */,
 				DC55B6212658EC0D00C5D2FD /* MealAppTests.swift in Sources */,
 				DCA5DEDD2663727300D67EE2 /* HomePresenterTests.swift in Sources */,
@@ -836,7 +880,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3CTUR53B57;
 				INFOPLIST_FILE = MealAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -858,7 +902,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3CTUR53B57;
 				INFOPLIST_FILE = MealAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

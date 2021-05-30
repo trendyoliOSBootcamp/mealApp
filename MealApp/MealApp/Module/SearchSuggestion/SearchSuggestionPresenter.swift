@@ -33,7 +33,7 @@ final class SearchSuggestionPresenter {
     private weak var delegate: SearchSuggestionDelegate?
     private let throttler: ThrottlerInterface
     
-    var suggestions: [Suggestion]?
+    private var suggestions: [Suggestion]?
     
     init(view: SearchSuggestionViewInterface?,
          router: SearchSuggestionRouterInterface,
